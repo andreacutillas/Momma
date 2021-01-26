@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+	padding: 0;
+	border: 0;
+    box-sizing: border-box;
+	outline: none;
+	list-style: none;
+	text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif
+}
+
+header,
+main {
+    width: 980px;
+    margin: auto;
+}
+
+#menu {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+}
+
+#list_menu ul{
+    display: flex;
+    flex-wrap: wrap;
+
+    list-style: none;
+}
+
+#list_menu li { 
+    width: 250px;    
+}
+
+.cabecera {
+    min-height: 100vh;
+}
+
+
+
+
