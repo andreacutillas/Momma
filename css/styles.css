@@ -10,19 +10,24 @@
     font-family: 'Roboto', sans-serif
 }
 
-header,
-main {
+header {
+    z-index: 10;
     width: 980px;
     margin: auto;
+    position: relative;
 }
+
+/* Maquetación INDEX */
+
 
 #menu {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    text-align: center;
     justify-content: space-between;
+    position: absolute;
+    z-index: 20;
+    padding-top: 54px;
 }
 
 #list_menu ul{
@@ -33,13 +38,245 @@ main {
 }
 
 #list_menu li { 
-    width: 250px;    
+    width: 80px;    
 }
+
+#list_menu li a {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.12em;
+    color: black;
+}
+
+#list_menu li a:hover {
+    color: #DA605A;
+}
+
+/* Maquetación CABECERA */
 
 .cabecera {
     min-height: 100vh;
+    width: 100vw;
+}
+
+.cabecera img {
+    z-index: -3;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.caja_alinear {
+    width: 980px;
+    margin: auto;
+}
+
+.caja_blur {
+    position: absolute;
+    width: 563px;
+    height: 462px;
+    top: 30%;
+
+    background: rgba(255, 255, 255, 0.5);
+
+    backdrop-filter: blur(12px);
+    border-radius: 40px;
+}
+
+.caja_blur h1,
+.caja_blur p{
+    padding: 30px;
+}
+
+.caja_blur h1 {
+    padding-bottom: 10px;
+}
+
+.caja_blur p{
+    padding-top: 0;
+    font-weight: 300;
+
+}
+
+h1{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 56px;
+    line-height: 64px;
+    /* or 114% */
+
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+}
+
+p {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 28px;
+
+    color: #000000;
+}
+
+#btn-cabecera {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 30px 0 30px;
+    width: 100%;
+}
+
+.btn_regular {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 10px 20px;
+
+    width: 172px;
+    height: 44px;
+
+    background-color: transparent;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    border-radius: 40px;
+    position: relative;
+}
+
+.btn_heart {
+    background-color: transparent;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    border-radius: 40px;
+    position: relative;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+}
+
+a {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: tomato;
+}
+
+.btn_simple button {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: tomato;
+}
+
+
+.btn_regular  a {
+    position: absolute;
+    padding: 0;
+    color: black;
+    /* identical to box height, or 150% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+
+}
+
+.content {
+    width: 980px;
+    margin: auto;
+    position: relative;
 }
 
 
 
+/* Maquetación SECCIONES */
 
+section {
+    padding-bottom: 100px;
+}
+
+.galeria{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.galeria figure {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.galeria figure img {
+    border-radius: 40px;
+    width: 100%;
+    object-fit: cover;
+    
+}
+
+figcaption {
+    width: 100%;
+}
+
+.galeria h5{
+    padding-top: 22px;
+}
+
+h5 {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.btn_simple {
+    background-color: transparent;
+
+}
+
+
+.img_act {
+    height: 100%;
+    width: 100%;
+    top: -18%;
+    left: 40px;
+    position: absolute;
+}
+
+.img_act .caja_blur {
+   width: 347px;
+   height: 450px; 
+}
+
+.galeria_btn {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}

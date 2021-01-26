@@ -14,16 +14,17 @@
 </head>
 
 <body>
-
     <header>
         <div id="menu">
-            <img id="logo" src="img/Logo.svg">
+            <a id="logo" href="index.html"> 
+                <img src="img/Logo.svg" alt="logo">
+            </a>
             <nav id="list_menu">
                 <ul>
-                    <li><a href="#">STORE</a></li>
-                    <li><a href="#">ABOUT</a></li>
-                    <li><a href="#">CART</a></li>
-                    <li><a href="#"><img src="img/user.svg"></a></li>
+                    <li><a class="btn-store" href="#1">STORE</a></li>
+                    <li><a class="btn-about" href="#">ABOUT</a></li>
+                    <li><a class="btn-cart" href="#">CART</a></li>
+                    <li><a class="btn-index" href="#"><img src="img/user.svg" alt="user"></a></li>
                 </ul>
             </nav>
         </div>
@@ -31,87 +32,115 @@
 
     <main>
         <section class="cabecera">
-            <img src="img/img1.jpg">
-            <h1>Radiant Faceted Crystal Glass Set</h1>
-            <p1>Thanks to their faceted shapes, these mouth-blown Radiant Crystal Glasses can be placed down in a variety of ways, creating interesting reflections of light and liquid from different angles.</p1>
-            <button class="btn_regular">Shop Now</button>
+            <img src="img/img1.svg" alt="img1">
+            <div class="caja_alinear">
+                <div class="caja_blur">
+                    <h1>Radiant Faceted Crystal Glass Set</h1>
+                    <p>Thanks to their faceted shapes, these mouth-blown Radiant Crystal Glasses can be placed down in a variety of ways, creating interesting reflections of light and liquid from different angles.</p>
+                    <div id="btn-cabecera">
+                        <button class="btn_regular" onclick="window.location.href='articulo.html'">Shop Now</button>
+                        <button class="btn_heart"><svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.3672 16.6469C12.6813 15.9195 13.1343 15.2603 13.7008 14.7063C14.2677 14.1506 14.936 13.709 15.6695 13.4055C16.4301 13.0895 17.2459 12.9278 18.0695 12.9297C19.225 12.9297 20.3523 13.2461 21.332 13.8438C21.5664 13.9867 21.7891 14.1438 22 14.3149C22.2109 14.1438 22.4336 13.9867 22.668 13.8438C23.6477 13.2461 24.775 12.9297 25.9305 12.9297C26.7625 12.9297 27.5688 13.0891 28.3305 13.4055C29.0664 13.7102 29.7297 14.1485 30.2992 14.7063C30.8664 15.2597 31.3195 15.919 31.6328 16.6469C31.9586 17.4039 32.125 18.2078 32.125 19.0352C32.125 19.8156 31.9656 20.6289 31.6492 21.4563C31.3844 22.1477 31.0047 22.8649 30.5195 23.5891C29.7508 24.7352 28.6938 25.9305 27.3813 27.1422C25.2063 29.1508 23.0523 30.5383 22.9609 30.5945L22.4055 30.9508C22.1594 31.1078 21.843 31.1078 21.5969 30.9508L21.0414 30.5945C20.95 30.536 18.7984 29.1508 16.6211 27.1422C15.3086 25.9305 14.2516 24.7352 13.4828 23.5891C12.9977 22.8649 12.6156 22.1477 12.3531 21.4563C12.0367 20.6289 11.8773 19.8156 11.8773 19.0352C11.875 18.2078 12.0414 17.4039 12.3672 16.6469ZM22 29.0969C22 29.0969 30.3438 23.7508 30.3438 19.0352C30.3438 16.6469 28.368 14.711 25.9305 14.711C24.2172 14.711 22.7312 15.6672 22 17.0641C21.2688 15.6672 19.7828 14.711 18.0695 14.711C15.632 14.711 13.6562 16.6469 13.6562 19.0352C13.6562 23.7508 22 29.0969 22 29.0969Z" fill="black"/>
+                            </svg>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
         </section>
         
-        <section class="galeria">
-            <div>
+        <section class="content" >
+            <div class="galeria">
                 <figure>
-                    <img src="img/img2.jpg">
+                    <img src="img/img2.jpg" alt="img2">
                     <figcaption>
                         <h5>Eames® Plywood</h5>
-                        <p1>Elephant 75th Anniversary Edition</p1>
-                        <button class="btn_simple">Shop Now</button>
+                        <p>Elephant 75th Anniversary Edition</p>
+                        <a class="btn_simple" href="store.html"><button> Shop Now</button></a>
                     </figcaption>
                 </figure>
                 <figure>
-                    <img src="img/img3.jpg">
+                    <img src="img/img3.jpg" alt="img3">
                     <figcaption>
                         <h5>HAY Ellipse </h5>
-                        <p1>Trays</p1>
-                        <button class="btn_simple">Shop Now</button>
+                        <p>Trays</p>
+                        <a class="btn_simple" href="store.html"><button> Shop Now</button></a>
                     </figcaption>
                 </figure>
                 <figure>
-                    <img src="img/img4.jpg">
+                    <img src="img/img4.jpg" alt="img4">
                     <figcaption>
                         <h5>Sophie Monet</h5>
-                        <p1>Pine Wood Huggie Earrings</p1>
-                        <button class="btn_simple">Shop Now</button>
+                        <p>Pine Wood Huggie Earrings</p>
+                        <a class="btn_simple" href="store.html"><button> Shop Now</button></a>
                     </figcaption>
                 </figure>
             </div>
         </section>
         
-        <section class="heng">
-            <img src="img/img5.jpg">
-            <h1>Heng Balance Lamp</h1>
-            <p1>Within the frame of the pleasingly minimalist Heng Lamp is a surprising way to illuminate it.</p1>
-            <button class="btn_regular">Shop Now</button>
+        <section class="content">
+            <img src="img/img5.jpg" alt="img5">
+            <div class="img_act">
+                <div class="caja_blur">
+                    <h1>Heng Balance Lamp</h1>
+                    <p>Within the frame of the pleasingly minimalist Heng Lamp is a surprising way to illuminate it.</p>
+                    <div id="btn-cabecera">
+                        <a><button class="btn_regular">Shop Now</button></a>
+                        <button class="btn_heart"><svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.3672 16.6469C12.6813 15.9195 13.1343 15.2603 13.7008 14.7063C14.2677 14.1506 14.936 13.709 15.6695 13.4055C16.4301 13.0895 17.2459 12.9278 18.0695 12.9297C19.225 12.9297 20.3523 13.2461 21.332 13.8438C21.5664 13.9867 21.7891 14.1438 22 14.3149C22.2109 14.1438 22.4336 13.9867 22.668 13.8438C23.6477 13.2461 24.775 12.9297 25.9305 12.9297C26.7625 12.9297 27.5688 13.0891 28.3305 13.4055C29.0664 13.7102 29.7297 14.1485 30.2992 14.7063C30.8664 15.2597 31.3195 15.919 31.6328 16.6469C31.9586 17.4039 32.125 18.2078 32.125 19.0352C32.125 19.8156 31.9656 20.6289 31.6492 21.4563C31.3844 22.1477 31.0047 22.8649 30.5195 23.5891C29.7508 24.7352 28.6938 25.9305 27.3813 27.1422C25.2063 29.1508 23.0523 30.5383 22.9609 30.5945L22.4055 30.9508C22.1594 31.1078 21.843 31.1078 21.5969 30.9508L21.0414 30.5945C20.95 30.536 18.7984 29.1508 16.6211 27.1422C15.3086 25.9305 14.2516 24.7352 13.4828 23.5891C12.9977 22.8649 12.6156 22.1477 12.3531 21.4563C12.0367 20.6289 11.8773 19.8156 11.8773 19.0352C11.875 18.2078 12.0414 17.4039 12.3672 16.6469ZM22 29.0969C22 29.0969 30.3438 23.7508 30.3438 19.0352C30.3438 16.6469 28.368 14.711 25.9305 14.711C24.2172 14.711 22.7312 15.6672 22 17.0641C21.2688 15.6672 19.7828 14.711 18.0695 14.711C15.632 14.711 13.6562 16.6469 13.6562 19.0352C13.6562 23.7508 22 29.0969 22 29.0969Z" fill="black"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                
+            </div>
+            
         </section>
         
-        <section class="galeria">
-            <div>
-                <figure>
-                    <img src="img/img6.jpg">
-                    <figcaption>
-                        <h5>Lexon Mino</h5>
-                        <p1>L Pairable Speaker</p1>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="img/img7.jpg">
-                    <figcaption>
-                        <h5>De Kooning </h5>
-                        <p1>Framed Print</p1>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="img/img8.jpg">
-                    <figcaption>
-                        <h5>Menorah</h5>
-                        <p1>Candle Holder</p1>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="img/img9.jpg">
-                    <figcaption>
-                        <h5>JWDA</h5>
-                        <p1>Table Lamp</p1>
-                    </figcaption>
-                </figure>
-                <button class="btn_regular">Shop All</button>
+        <section class="content">
+            <div class="galeria_btn">
+                <div class="galeria">
+                    <figure>
+                        <img src="img/img6.jpg" alt="img6">
+                        <figcaption>
+                            <h5>Lexon Mino</h5>
+                            <p1>L Pairable Speaker</p1>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/img7.jpg" alt="img7">
+                        <figcaption>
+                            <h5>De Kooning </h5>
+                            <p1>Framed Print</p1>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/img8.jpg" alt="img8">
+                        <figcaption>
+                            <h5>Menorah</h5>
+                            <p1>Candle Holder</p1>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/img9.jpg" alt="img9">
+                        <figcaption>
+                            <h5>JWDA</h5>
+                            <p1>Table Lamp</p1>
+                        </figcaption>
+                    </figure>
+                </div>
+                <a><button class="btn_regular">Shop All</button></a>
+            </div>
+
+               
             </div>
         </section>
         
-        <section>
+        <section class="content">
             <div>
                 <h1>Discover what sets MoMA Design Store apart.</h1>
                 <p1>Do you know how we choose products for MoMA Design Store? Or what informs our unique point of view? Discover what sets MoMA Design Store    apart in our What Makes Us Different story.</p1>
-                <button class="btn_regular">Learn More About Us</button>
+                <a><button class="btn_regular">Learn More About Us</button></a>
             </div>
             <img src="img/img10.jpg">
         </section>
