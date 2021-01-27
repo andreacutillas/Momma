@@ -11,6 +11,11 @@
         <!--FONTS-->
     <link rel="preconnect" href="https://fonts.gstatic.com/%22%3E"> 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,900;1,400;1,700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+        
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+        
+        
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 </head>
 
 <body>
@@ -73,39 +78,66 @@
           </div>
     </header>
 
-    
-    <main>
-        <section>
-                    
-            <div id="caja_about">
-                <div class="galeria_detalle">
-                <img src="img/img22.jpg" alt="Crystal Glass">
-                <img src="img/img16.jpg" alt="Crystal Glass">
-                <img src="img/img17.jpg" alt="Crystal Glass">
-            </div>
                 
-                <div>
-                    <p1>BEST SELLER</p1>
+<!--
+                <div class="carousel carousel-nav"
+                     data-flickity='{ "asNavFor": ".carousel-main", "contain": true, "pageDots": false }'>
+                
+                    <div class="carousel-cell"><img src="img/img22.jpg" alt="Crystal Glass"></div>
+                    
+                    <div class="carousel-cell"><img src="img/img16.jpg"     alt="Crystal Glass"></div>
+                    
+                    <div class="carousel-cell"><img src="img/img17.jpg" alt="Crystal Glass"></div>
+                </div>
+-->
+    <main>
+        <section class="section_header">
+            <div id="caja_article">
+                <div  id="carousel">
+                    <div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true }'>
+                
+                        <div class="carousel-cell">
+                            <img src="img/img22.jpg" alt="Crystal Glass">
+                        </div>
+                    
+                        <div class="carousel-cell">
+                            <img src="img/img16.jpg" alt="Crystal Glass">
+                        </div>
+                    
+                        <div class="carousel-cell">
+                            <img src="img/img17.jpg" alt="Crystal Glass">
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="carousel_text">
+                    <p id="p1">BEST SELLER</p>
                     <h1>Radiant Faceted Crystal Glass Set</h1>
                     <div>
-                        <p1>€34.95    Non-Member Price</p1>
-                        <p4>€44.95    Member Price</p4>
-                        <p5>MEMBERS SAVE UP TO 20% & GET FREE SHIPPING</p5>
-                        <p1>Gift Wrap Aviable</p1>
+                        <p id="p1">€34.95    Non-Member Price</p>
+                        <p id="p2">€44.95    Member Price</p>
+                        <p id="p3">MEMBERS SAVE UP TO 20% & GET FREE SHIPPING</p>
+                        <p id="p1">Gift Wrap Aviable</p>
                         <button class="btn_regular">Add to Cart</button>
                     </div>
                 </div>
+            
             </div>
+            
+            
+
+                
+            
         </section>
         
         <section>
             <div id="caja_about">
                 <h7>Description</h7>
-                <p1>MoMA Exclusive: Thanks to their faceted shapes, these mouth-blown Radiant Crystal Glasses can be placed down in a variety of ways, creating interesting reflections of light and liquid from different angles. Set of two. Produced by Puik. 
-                Dutch designer Lara van der Lugt was inspired to design these glasses by asking herself the question: How can we make people aware of how precious water is? Because the future of water availability remains uncertain, van der Lugt feels we should cherish our water supply as if it were a rare diamond.</p1>
+                <p>MoMA Exclusive: Thanks to their faceted shapes, these mouth-blown Radiant Crystal Glasses can be placed down in a variety of ways, creating interesting reflections of light and liquid from different angles. Set of two. Produced by Puik. 
+                Dutch designer Lara van der Lugt was inspired to design these glasses by asking herself the question: How can we make people aware of how precious water is? Because the future of water availability remains uncertain, van der Lugt feels we should cherish our water supply as if it were a rare diamond.</p>
             </div>
             
-            <div id="caja_about">
+            <div>
                 
                 <h7>Details</h7>
                 
@@ -113,34 +145,34 @@
                     
                     <div class="columna">
                         <div class="texto">
-                            <p1><b>Designer</b></p1>
-                            <p1>Lara van der Lugt</p1>
+                            <p><b>Designer</b></p>
+                            <p>Lara van der Lugt</p>
                         </div>
                         <div class="texto">
-                            <p1><b>Size</b></p1>
-                            <p1>3.45h x 3.5"diam.</p1>
-                        </div>
-                    </div>
-                    
-                    <div class="columna">
-                        <div class="texto">
-                            <p1><b>Materials</b></p1>
-                            <p1>Crystal</p1>
-                        </div>
-                        <div class="texto">
-                            <p1><b>Year of Design</b></p1>
-                            <p1>2014</p1>
+                            <p><b>Size</b></p>
+                            <p>3.45h x 3.5"diam.</p>
                         </div>
                     </div>
                     
                     <div class="columna">
                         <div class="texto">
-                            <p1><b>Origin</b></p1>
-                            <p1>Imported</p1>
+                            <p><b>Materials</b></p>
+                            <p>Crystal</p>
                         </div>
                         <div class="texto">
-                            <p1><b>Volume</b></p1>
-                            <p1>5.3 oz.</p1>
+                            <p><b>Year of Design</b></p>
+                            <p>2014</p>
+                        </div>
+                    </div>
+                    
+                    <div class="columna">
+                        <div class="texto">
+                            <p><b>Origin</b></p>
+                            <p>Imported</p>
+                        </div>
+                        <div class="texto">
+                            <p><b>Volume</b></p>
+                            <p>5.3 oz.</p>
                         </div>
                     </div>
                 </div>
@@ -180,7 +212,7 @@
                         </figcaption>
                     </figure>
                 </div>
-                <button class="btn_regular" onclick="window.location.href='articulo.html'">Shop All</button>
+                <button class="btn_regular" onclick="window.location.href='./store.html'">Shop All</button>
             </div>
         </section>
             
