@@ -27,7 +27,7 @@
                             <?php
                                 session_start();
                                 if(!isset($_SESSION['nombre'])){
-                                    echo '<a class="open-button" href="profile.html">'; 
+                                    echo '<a class="open-button" href="profile.php">'; 
                                 }
                                 else {
                                     echo '<a class="open-button" onclick="openForm()">';

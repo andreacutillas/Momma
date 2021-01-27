@@ -384,15 +384,30 @@ h5 {
     line-height: 32px;
 }
 
-h7 {
+.section_subtitle h4 {
     font-family: Montserrat;
     font-style: normal;
     font-weight: bold;
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 32px;
+    line-height: 40px;
     padding-bottom: 42px;
     text-decoration: underline #DA605A;
 }
+
+.section_subtitle .columna {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.section_subtitle {
+    padding-bottom: 100px;
+}
+
+.section_subtitle #caja_about p {
+    padding-bottom: 0;
+}
+
+.s
 
 .btn_simple {
     background-color: transparent;
@@ -621,8 +636,4 @@ label {
    display: flex;
    flex-wrap: wrap;
    flex-direction: column;
-}
-
-.section_subtitle h7 {
-    padding-bottom: 30px;
 }

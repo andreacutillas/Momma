@@ -150,55 +150,55 @@
                 </div> 
             </section>
             
-            <section>
-                <h7>Description</h7>
+            <section class="section_subtitle">
+                <h4>Description</h4>
                 <div id="caja_about">
                     <p>MoMA Exclusive: Thanks to their faceted shapes, these mouth-blown Radiant Crystal Glasses can be placed down in a variety of ways, creating interesting reflections of light and liquid from different angles. Set of two. Produced by Puik. 
                     Dutch designer Lara van der Lugt was inspired to design these glasses by asking herself the question: How can we make people aware of how precious water is? Because the future of water availability remains uncertain, van der Lugt feels we should cherish our water supply as if it were a rare diamond.</p>
                 </div>
-                
-                <div> 
-                    <h7>Details</h7>
-                    <div class="contenido">    
-                        <div class="columna">
-                            <div class="texto">
-                                <p><b>Designer</b></p>
-                                <p>Lara van der Lugt</p>
-                            </div>
-                            <div class="texto">
-                                <p><b>Size</b></p>
-                                <p>3.45h x 3.5"diam.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="columna">
-                            <div class="texto">
-                                <p><b>Materials</b></p>
-                                <p>Crystal</p>
-                            </div>
-                            <div class="texto">
-                                <p><b>Year of Design</b></p>
-                                <p>2014</p>
-                            </div>
-                        </div>
-                        
-                        <div class="columna">
-                            <div class="texto">
-                                <p><b>Origin</b></p>
-                                <p>Imported</p>
-                            </div>
-                            <div class="texto">
-                                <p><b>Volume</b></p>
-                                <p>5.3 oz.</p>
-                            </div>
-                        </div>
-                    </div> 
-                </div>
+            </section>
             
+            <section class="section_subtitle">
+                <h4>Details</h4>
+                <div class="contenido">    
+                    <div class="columna">
+                        <div class="texto">
+                            <p><b>Designer</b></p>
+                            <p>Lara van der Lugt</p>
+                        </div>
+                        <div class="texto">
+                            <p><b>Size</b></p>
+                            <p>3.45h x 3.5"diam.</p>
+                        </div>
+                    </div>                        
+                    <div class="columna">
+                        <div class="texto">
+                            <p><b>Materials</b></p>
+                            <p>Crystal</p>
+                        </div>
+                        <div class="texto">
+                            <p><b>Year of Design</b></p>
+                            <p>2014</p>
+                        </div>
+                    </div>
+                        
+                     <div class="columna">
+                        <div class="texto">
+                            <p><b>Origin</b></p>
+                            <p>Imported</p>
+                        </div>
+                        <div class="texto">
+                            <p><b>Volume</b></p>
+                            <p>5.3 oz.</p>
+                        </div>
+                    </div>
+                </div>     
+            </section>
                 
 
             <section id="section_btn" class="section_subtitle">
-                <h7>You Might Also Like</h7>
+                
+                <h4>You Might Also Like</h4>
                 <div class="gallery_btn">
                     <div class="gallery">
                         <figure>
