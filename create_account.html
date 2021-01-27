@@ -36,7 +36,7 @@
                 <button type="button" class="btn cancel" onclick="closeForm()">x</button>
                 <h4>Sign in to your Account</h4>
                 <h6>New to MoMA Design Store?</h6>
-                <button  type="submit" class="btn_simple" class="btn">Create an account</button>
+                <button  type="submit" class="btn_simple" onclick="window.location.href='create_account.html'">Create an account</button>
 
                 <div id="left_itm">
                     <label for="email">Email</label>
@@ -75,14 +75,23 @@
 
 
     <main>
-        <section id="section_btn" class="section_header">
-        <h1>Create an Account</h1>
-        <h5>Already have an account?</h5>
-        <button class="btn_simple">Log In</button>
+        <section id="form_section" class="section_header">
+            <h1>Create an Account</h1>
+            <h5>Already have an account?</h5>
+            <button class="btn_simple">Log In</button>
+              
+            <form action="crear-registro.php" method="post" onsubmit="return validar()" class="form-container">
+                <label for="first_name">First Name</label>
+                <input type="text" id="first_name" placeholder="First Name" name="first_name" required>
         
-        <div class="gallery_btn">
-                <div class="gallery">
-                    <form>
+                <label for="last_name">Last Name</label>
+                <input type="text" id="last_name" placeholder="Last Name" name="last_name" required>
+        
+                <label for="email">Email</label>
+                <input type="text" id="email" placeholder="Enter Email" name="email" required>
+        
+                <label for="psw">Password</label>
+                <input type="password" id="psw" placeholder="Enter Password" name="psw" required>
 
                         <label for="first_name"><b></b></label>
                         <input type="text" placeholder="First Name" name="first_name" required>
@@ -105,9 +114,8 @@
                     </form>
                 </div>
         
-                <img src="img/img14.jpg">
+                
             
-            </div>
             
         </section>
         

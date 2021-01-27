@@ -587,6 +587,24 @@ footer {
     padding-bottom: 65px;
 }
 
+/* Maquetación CREATE_ACCOUNT.HTML */
+
+#form_section .form-container {
+    padding: 53px 250px;
+}
+
+#form_section .form-container #center_itm img{
+    padding-top: 53px;
+}
+
+label {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 28px;
+}
+
 #carousel {
     width: 65%;
 }
