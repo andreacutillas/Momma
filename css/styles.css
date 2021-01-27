@@ -622,3 +622,7 @@ label {
    flex-wrap: wrap;
    flex-direction: column;
 }
+
+.section_subtitle h7 {
+    padding-bottom: 30px;
+}
