@@ -93,12 +93,9 @@ h4 {
   
   /* The popup form - hidden by default */
 .form-popup {
-    /* left: 653px;
-    right: 146px;
-    top: 87px;
-    bottom: 3061px; */
-
-    /* Colors / White */
+    position: absolute;
+    right: 0;
+    top: 90px;
     width: 400px;
 
     background: #FFFFFF;
@@ -106,16 +103,24 @@ h4 {
     border-radius: 40px;    
 
     display: none;
-    position: fixed;
     z-index: 40;
+    overflow: hidden;
 }
   
   /* Add styles to the form container */
 .form-container {
     padding: 20px;
-    /* display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;   */
+}
+
+.btn_cancel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 25px;
+}
+
+.btn_cancel:hover{
+    color: #DA605A;
 }
 
 #left_itm {
@@ -134,7 +139,11 @@ h4 {
 #center_itm .btn_simple{
     padding-top: 20px;
 }
-  
+
+#cancel_contain{
+    position: relative;
+}
+
   /* Full-width input fields */
 .form-container input[type=text], .form-container input[type=password] {
     width: 100%;
@@ -162,10 +171,6 @@ h4 {
     margin-bottom:10px;
   }
 
-.form-container .cancel {
- 
-
-}
   
   /* Add some hover effects to buttons */
 .form-container .btn:hover, .open-button:hover {
