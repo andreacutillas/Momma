@@ -513,3 +513,15 @@ footer {
     padding-bottom: 34px;
 }
 
+
+.section_header {
+    padding-top: 162px ;
+}
+
+.section_header h1 {
+    padding-bottom: 72px;
+}
+
+.section_header .gallery_btn figure {
+    padding-bottom: 65px;
+}
