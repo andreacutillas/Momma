@@ -22,8 +22,8 @@ if(isset($_POST['email']))
             if($pass == $_POST['pass'])
             {
                 session_start();
-                $_SESSION['nombre'] = $_POST['user'];
-                header('Location: home.php');
+                $_SESSION['nombre'] = $_POST['email'];
+                header('Location: index.php');
             }
             else{
                 header('Location: index.php?error=5');

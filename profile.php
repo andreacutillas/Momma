@@ -27,7 +27,7 @@
                         <li>
                             <?php
                                 session_start();
-                                if(!isset($_SESSION['nombre'])){
+                                if(isset($_SESSION['nombre'])){
                                     echo '<a class="open-button" href="profile.php">'; 
                                 }
                                 else {
@@ -94,15 +94,19 @@
         </header>
 
         <main>
-            <section id="section_btn" class="section_header">
+            <section class="section_header">
                 <h1>My Profile</h1>
             
                 <div>
                     <h3>Name</h3>
                     <h3>Email</h3>
                 </div>
+
+                </section>
+
+            <section id="section_btn" class="section_subtitle">
             
-                <h7>Last Seen</h7>
+                <h4>Last Seen</h4>
             
                 <div class="gallery_btn">
                     <div class="gallery">
@@ -135,12 +139,7 @@
                             </figcaption>
                         </figure>
                     </div>
-                    <button class="btn_regular">Log Out</button>
-                    <?php
-                        session_start();
-                        session_destroy();
-                        header("Location: index.php");
-                    ?>
+                    <button class="btn_regular" onclick="window.location.href='logout.php'">Log Out</button>
                 </div>
             </section>
         </main>
