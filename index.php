@@ -155,7 +155,7 @@
             </section>
             
             <!-- Sección 2 -->
-            <section>
+            <section id="section_img_center">
                 <img src="img/img5.jpg" alt="img5">
                 <div class="img_act">
                     <div class="blur">
