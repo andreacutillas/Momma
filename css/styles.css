@@ -9,12 +9,11 @@
     font-family: 'Montserrat', sans-serif;
     font-family: 'Roboto', sans-serif;
 
-    background-color: red;
 }
 
 header {
     z-index: 10;
-    width: 480px;
+    width: 980px;
     margin: auto;
     position: relative;
 }
@@ -262,7 +261,7 @@ h4 {
 .cabecera img {
     z-index: -3;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     object-fit: cover;
     border-radius: 0;
 }
@@ -270,21 +269,7 @@ h4 {
 .caja_blur {
     width: 980px;
     margin: auto;
-}
-
-
-
-.gallery img:hover {
-    -moz-box-shadow: 0 0 10px #ccc;
-    -webkit-box-shadow: 0 0 10px #ccc;
-    box-shadow: 0 0 10px #ccc;
-}
-
-
-.gallery figure img:hover{
-    transform: scale(1.3);
-}
-    
+}  
     
 
 
@@ -385,17 +370,31 @@ section {
 }
 
 .gallery figure {
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
+    padding: 10px 0;
 }
 
 
 .gallery figure img {
     border-radius: 40px;
     width: 100%;
+    /* height: 100%; */
     object-fit: cover;
     
 }
+
+.gallery img:hover {
+    -moz-box-shadow: 0 0 10px #ccc;
+    -webkit-box-shadow: 0 0 10px #ccc;
+    box-shadow: 0 0 10px #ccc;
+}
+
+
+.gallery figure img:hover{
+    transform: scale(1.3);
+}
+  
 
 figcaption {
     width: 100%;
@@ -646,6 +645,9 @@ label {
 }
 
 
+/* Maquetación de la MEDIA QUERY */
+
+
 @media (max-width: 980px) {
 
     header,
@@ -653,9 +655,19 @@ label {
         width: 90vw;
     }
 
-    body {
-        background-color: red;
-        
+    #section_img_center img {
+        width: 100%;
     }
+
+    .gallery figure {
+        
+        width: 100%;
+
+    } 
+
+    .gallery figure img {
+        height: 500px;
+    }
+
 
 }
