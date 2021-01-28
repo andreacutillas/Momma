@@ -98,8 +98,7 @@
                 <h1>My Profile</h1>
             
                 <div>
-                    <h3>Name</h3>
-                    <h3>Email</h3>
+                    <h3>Hello</h3>
                 </div>
 
                 </section>

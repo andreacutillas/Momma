@@ -123,9 +123,10 @@
                         </figure>
                     </div>
                     <div class="total">
-                        <h7>Total</h7>
-                        <p>€78.65</p>
+                        <h4>Total</h4>
+                        <p id="p2">€78.65</p>
                     </div>
+                    <button class="btn_regular" onclick="#">Checkout</button>
                     <button class="btn_regular" onclick="window.location.href='./store.html'">Continue Shopping</button>
                 </div>
             </section>
