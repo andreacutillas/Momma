@@ -223,6 +223,33 @@ h4 {
     fill: #DA605A;
 }
 
+.btn_simple {
+    background-color: transparent;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: tomato;
+
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+}
+
+.btn_simple:hover,
+.btn_simple:focus {
+    background-size: 100% 2px; 
+}
+
+.form-popup p {
+    padding: 30px;
+    color: red;
+    font-size: 12px;
+}
+
 /* Maquetación CABECERA */
 
 .cabecera {
@@ -407,28 +434,6 @@ h5 {
     padding-bottom: 0;
 }
 
-.s
-
-.btn_simple {
-    background-color: transparent;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 24px;
-    color: tomato;
-
-    background-image: linear-gradient(currentColor, currentColor);
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 2px;
-    transition: background-size .3s;
-}
-
-.btn_simple:hover,
-.btn_simple:focus {
-    background-size: 100% 2px; 
-}
 
 .img_act {
     width: 100%;
@@ -636,4 +641,14 @@ label {
    display: flex;
    flex-wrap: wrap;
    flex-direction: column;
+}
+
+@media (max-width: 1000px) {
+
+    header,
+    section{
+        width: 100vw;
+        padding: 0 10px;
+    }
+
 }

@@ -22,7 +22,7 @@ if(isset($_POST['email']))
             
             session_start();
             $_SESSION['nombre'] = $_POST['email'];
-            header('Location: home.php');
+            header('Location: index.php');
         }
         
         else{

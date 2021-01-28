@@ -11,6 +11,9 @@
             <!--FONTS-->
         <link rel="preconnect" href="https://fonts.gstatic.com/%22%3E"> 
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,900;1,400;1,700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+       
+        <script type="text/javascript" src="js/menu.js"></script>
+    
     </head>
 
     <body>
@@ -26,7 +29,7 @@
                         <li>
                             <?php
                                 session_start();
-                                if(!isset($_SESSION['nombre'])){
+                                if(isset($_SESSION['nombre'])){
                                     echo '<a class="open-button" href="profile.php">'; 
                                 }
                                 else {
@@ -114,10 +117,15 @@
 
                     <label for="psw2">Confirm Password</label>
                     <input type="password" id="psw2" placeholder="Confirm Password" name="psw2" required>
+                    
+                    
                     <div id="center_itm">
                         <button type="submit" class="btn_regular">Registrarse</button>
                     </div>
+
                 </form>
+                <p id="validaciones" style="display:none">Las contraseñas no coinciden. Por favor, revísalas e intenta enviar de nuevo.</p>
+
                 <div>
                     <figure id="center_itm">
                         <img src="img/img14.jpg" alt="img14">

@@ -14,7 +14,8 @@
         
         <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
         
-        
+        <script type="text/javascript" src="js/menu.js"></script>
+
         <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     </head>
 
@@ -32,8 +33,8 @@
                         <li>
                             <?php
                                 session_start();
-                                if(!isset($_SESSION['nombre'])){
-                                    echo '<a class="open-button" href="profile.html">'; 
+                                if(isset($_SESSION['nombre'])){
+                                    echo '<a class="open-button" href="profile.php">'; 
                                 }
                                 else {
                                     echo '<a class="open-button" onclick="openForm()">';
