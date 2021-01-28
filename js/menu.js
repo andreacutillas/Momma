@@ -8,6 +8,10 @@ function openForm() {
     document.getElementById("myForm").style.display = "none";
 }
 
+// MENU RESPONSIVE
+
+
+
 // VALIDAR REGISTRO
 
 function validar(){

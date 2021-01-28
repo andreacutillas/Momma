@@ -13,10 +13,24 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,900;1,400;1,700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
         <script type="text/javascript" src="js/menu.js"></script>
+
     </head>
 
     <body>
         <header>
+            <!-- Dropdown -->
+
+            <div class="dropdown" style="float:left;">
+                <button class="dropbtn">
+                    <figure><img src="img/dropdown.svg" alt="dropdown"></img></figure>
+                </button>
+                <div class="dropdown-content" style="left:0;">
+                    <a href="store.php">STORE</a>
+                    <a href="about.php">ABOUT</a>
+                    <a href="cart.php">CART</a>
+                </div>
+            </div>
+
             <!-- Menu -->
             <div id="menu">
                 <a class="logo" href="index.php"><img class="logo" src="img/Logo.svg" alt="logo"></a>
@@ -130,8 +144,8 @@
                     <figure>
                         <a href="article.php"><img src="img/img2.jpg" alt="img2"></a>
                         <figcaption>
-                            <h5>Eames® Plywood</h5>
-                            <p>Elephant 75th Anniversary Edition</p>
+                            <h5>Eames®</h5>
+                            <p>Plywood Elephant</p>
                             <button class="btn_simple" onclick="window.location.href='article.php'">Shop Now</button>
                         </figcaption>
                     </figure>
@@ -147,7 +161,7 @@
                         <a href="article.php"><img src="img/img4.jpg" alt="img4"></a>
                         <figcaption>
                             <h5>Sophie Monet</h5>
-                            <p>Pine Wood Huggie Earrings</p>
+                            <p>Earrings</p>
                             <button class="btn_simple" onclick="window.location.href='article.php'">Shop Now</button>
                         </figcaption>
                     </figure>

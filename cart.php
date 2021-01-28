@@ -120,7 +120,7 @@
                             <a href="article.php"><img src="img/img11.jpg" alt="Three Seasons"></a>
                             <figcaption>
                                 <h5>Three Seasons</h5>
-                                <p>Russian Matryoshka</p>
+                                <p>Matryoshka</p>
                                 <p id="p3">€207.95 includes VAT</p>
                             </figcaption>
                         </figure>

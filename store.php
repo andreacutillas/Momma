@@ -104,8 +104,8 @@
                     <figure>
                         <a href="article.php"><img src="img/img21.jpg" alt="Eames® Plywood"></a>
                         <figcaption>
-                            <h5>Eames® Plywood</h5>
-                            <p id="p4">Elephant 75th Anniversary</p>
+                            <h5>Eames®</h5>
+                            <p id="p4">Plywood Elephant</p>
                             <p id="p3">€1,965 includes VAT</p>
                         </figcaption>
                     </figure>
@@ -121,7 +121,7 @@
                         <a href="article.php"><img src="img/img19.jpg" alt="Sophie Monet"></a>
                         <figcaption>
                             <h5>Sophie Monet</h5>
-                            <p id="p4">Pine Wood Earrings</p>
+                            <p id="p4">Earrings</p>
                             <p id="p3">€76.95 includes VAT</p>
                         </figcaption>
                     </figure>
@@ -171,7 +171,7 @@
                         <a href="article.php"><img src="img/img11.jpg" alt="Three Seasons"></a>
                         <figcaption>
                             <h5>Three Seasons</h5>
-                            <p id="p4">Russian Matryoshka</p>
+                            <p id="p4">Matryoshka</p>
                             <p id="p3">€207.95 includes VAT</p>
                         </figcaption>
                     </figure>
