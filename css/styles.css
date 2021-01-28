@@ -771,7 +771,7 @@ label {
 
 @media (max-width: 760px) {
 
-    h4 {
+    .section_subtitle h4 {
         font-size: 5px;
         line-height: 29px;
     }
