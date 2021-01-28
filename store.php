@@ -102,7 +102,7 @@
                 <div class="gallery_btn">
                     <div class="gallery">
                     <figure>
-                    <a href="article.php"><img src="img/img21.jpg" alt="Eames® Plywood"></a>
+                        <a href="article.php"><img src="img/img21.jpg" alt="Eames® Plywood"></a>
                         <figcaption>
                             <h5>Eames® Plywood</h5>
                             <p id="p4">Elephant 75th Anniversary</p>
@@ -110,7 +110,7 @@
                         </figcaption>
                     </figure>
                     <figure>
-                    <a href="article.php"><img src="img/img20.jpg" alt="HAY Ellipse"></a>
+                        <a href="article.php"><img src="img/img20.jpg" alt="HAY Ellipse"></a>
                         <figcaption>
                             <h5>HAY Ellipse </h5>
                             <p id="p4">Trays</p>
@@ -118,7 +118,7 @@
                         </figcaption>
                     </figure>
                     <figure>
-                    <a href="article.php"><img src="img/img19.jpg" alt="Sophie Monet"></a>
+                        <a href="article.php"><img src="img/img19.jpg" alt="Sophie Monet"></a>
                         <figcaption>
                             <h5>Sophie Monet</h5>
                             <p id="p4">Pine Wood Earrings</p>
@@ -126,7 +126,7 @@
                         </figcaption>
                     </figure>
                     <figure>
-                    <a href="article.php"><img src="img/img18.jpg" alt="Caracas"></a>
+                        <a href="article.php"><img src="img/img18.jpg" alt="Caracas"></a>
                         <figcaption>
                             <h5>Caracas</h5>
                             <p id="p4">Desktop Mobile</p>
@@ -135,7 +135,7 @@
                     </figure>
                     
                     <figure>
-                    <a href="article.php"><img src="img/img6.jpg" alt="Lexon Mino L"></a>
+                        <a href="article.php"><img src="img/img6.jpg" alt="Lexon Mino L"></a>
                         <figcaption>
                             <h5>Lexon Mino L</h5>
                             <p id="p4">Pairable Speaker</p>
@@ -143,7 +143,7 @@
                         </figcaption>
                     </figure>
                     <figure>
-                    <a href="article.php"><img src="img/img7.jpg" alt="De Kooning"></a>
+                        <a href="article.php"><img src="img/img7.jpg" alt="De Kooning"></a>
                         <figcaption>
                             <h5>De Kooning</h5>
                             <p id="p4">Framed Print</p>
@@ -151,7 +151,7 @@
                         </figcaption>
                     </figure>
                     <figure>
-                    <a href="article.php"><img src="img/img8.jpg" alt="Menorah"></a>
+                        <a href="article.php"><img src="img/img8.jpg" alt="Menorah"></a>
                         <figcaption>
                             <h5>Menorah</h5>
                             <p id="p4">Candle Holder</p>
@@ -159,7 +159,7 @@
                         </figcaption>
                     </figure>
                     <figure>
-                    <a href="article.php"><img src="img/img9.jpg" alt="JWDA"></a>
+                        <a href="article.php"><img src="img/img9.jpg" alt="JWDA"></a>
                         <figcaption>
                             <h5>JWDA</h5>
                             <p id="p4">Table Lamp</p>
@@ -168,7 +168,7 @@
                     </figure>
                     
                     <figure>
-                    <a href="article.php"><img src="img/img11.jpg" alt="Three Seasons"></a>
+                        <a href="article.php"><img src="img/img11.jpg" alt="Three Seasons"></a>
                         <figcaption>
                             <h5>Three Seasons</h5>
                             <p id="p4">Russian Matryoshka</p>
@@ -176,7 +176,7 @@
                         </figcaption>
                     </figure>
                     <figure>
-                    <a href="article.php"><img src="img/img12.jpg" alt="Pond"></a>
+                        <a href="article.php"><img src="img/img12.jpg" alt="Pond"></a>
                         <figcaption>
                             <h5>Pond</h5>
                             <p id="p4">Mirror</p>
@@ -184,7 +184,7 @@
                         </figcaption>
                     </figure>
                     <figure>
-                    <a href="article.php"><img src="img/img13.jpg" alt="Plates"></a>
+                        <a href="article.php"><img src="img/img13.jpg" alt="Plates"></a>
                         <figcaption>
                             <h5>Plates</h5>
                             <p id="p4">Set of 4</p>
@@ -192,7 +192,7 @@
                         </figcaption>
                     </figure>
                     <figure>
-                    <a href="article.php"><img src="img/img15.jpg" alt="anOrdain"></a>
+                        <a href="article.php"><img src="img/img15.jpg" alt="anOrdain"></a>
                         <figcaption>
                             <h5>anOrdain</h5>
                             <p id="p4">Model 1 Watch</p>

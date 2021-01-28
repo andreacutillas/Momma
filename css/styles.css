@@ -628,6 +628,8 @@ label {
     line-height: 28px;
 }
 
+/*Carousel*/
+
 #carousel {
     width: 65%;
 }
@@ -662,7 +664,6 @@ label {
         line-height: 29px;
     }
 
-    
 
     header,
     section{
@@ -681,9 +682,21 @@ label {
         height: 500px;
     }
 
-    #caja_about {
-        flex-wrap: nowrap;
+    #about_img {
+        padding-bottom: 0px;
+        width: 100%;
     }
+
+    .section_header .gallery_btn figure {
+        padding-bottom: 0px;
+    }
+
+    /*Form*/
+
+    #form_section .form-container {
+        padding: 23px 150px;
+    }
+
 
 /*No funciona*/
 
@@ -708,7 +721,7 @@ label {
 @media (max-width: 780px) {
 
     h4 {
-        font-size: 20px;
+        font-size: 5px;
         line-height: 29px;
     }
 
@@ -721,8 +734,12 @@ label {
         font-size: 16px;
     }
 
-    #caja_about {
-        flex-wrap: wrap;
+    .section_header {
+        padding-top: 62px ;
+    }
+
+    #caja_article {
+        flex-direction: column;
     }
 
     #caja_about div {
@@ -736,6 +753,37 @@ label {
 
     #caja_about img {
         width: 80vw;
+    }
+
+    
+
+    /*Carousel*/
+
+    #carousel {
+        width: 100%;
+    }
+
+    #carousel_text {
+        width: 100%;
+        padding-top: 60px;
+    }
+
+    #carousel_text button {
+        margin-top: 40px;
+    }
+
+    /*Form*/
+
+    #form_section .form-container {
+        padding: 23px 50px;
+    }
+
+    .shipping {
+        width: 10%;
+    }
+
+    #menu {
+        display: none;
     }
 
     footer {

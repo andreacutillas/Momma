@@ -120,13 +120,13 @@
                     
                     
                     <div id="center_itm">
-                        <button type="submit" class="btn_regular">Registrarse</button>
+                        <button type="submit" class="btn_regular">Register</button>
                     </div>
 
                 </form>
                 <p id="validaciones" style="display:none">Las contraseñas no coinciden. Por favor, revísalas e intenta enviar de nuevo.</p>
 
-                <div>
+                <div class="shipping">
                     <figure id="center_itm">
                         <img src="img/img14.jpg" alt="img14">
                     </figure>

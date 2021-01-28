@@ -102,14 +102,14 @@
                 <div class="gallery_btn">
                     <div>
                         <figure>
-                            <img src="img/img23.jpg" alt="Design Store">
+                            <img id="about_img" src="img/img23.jpg" alt="Design Store">
                         </figure>
                     </div>
                 </div>
             </section>
                     
             <section class="section_subtitle">
-                <div id="caja_about">
+                <div class="wrap" id="caja_about">
                     <h4>Discover MoMA Design Store</h4>
                     <p>At MoMA Design Store, you’ll find classics of yesterday and today, from humble masterpieces to transformative technologies. Design that elevates the everyday.
 
