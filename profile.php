@@ -98,7 +98,8 @@
                 <h1>My Profile</h1>
             
                 <div>
-                    <h3>Hello</h3>
+                    <h3>Hello!</h3>
+                    <p id="p2">(Name)</p>
                 </div>
 
                 </section>
@@ -110,28 +111,28 @@
                 <div class="gallery_btn">
                     <div class="gallery">
                         <figure>
-                            <img src="img/img12.jpg" alt="Pond">
+                            <a href="article.php"><img src="img/img12.jpg" alt="Pond"></a>
                             <figcaption>
                                 <h5>Pond</h5>
                                 <p>Mirror</p>
                             </figcaption>
                         </figure>
                         <figure>
-                            <img src="img/img13.jpg" alt="Plates">
+                            <a href="article.php"><img src="img/img13.jpg" alt="Plates"></a>
                             <figcaption>
                                 <h5>Plates</h5>
                                 <p>Set of 4</p>
                             </figcaption>
                         </figure>
                         <figure>
-                            <img src="img/img11.jpg" alt="Three Seasons">
+                            <a href="article.php"><img src="img/img11.jpg" alt="Three Seasons"></a>
                             <figcaption>
                                 <h5>Three Seasons</h5>
                                 <p>Russian Matryoshka</p>
                             </figcaption>
                         </figure>
-                            <figure>
-                            <img src="img/img20.jpg" alt="HAY Ellipse">
+                        <figure>
+                            <a href="article.php"><img src="img/img20.jpg" alt="HAY Ellipse"></a>
                             <figcaption>
                                 <h5>HAY Ellipse </h5>
                                 <p>Trays</p>

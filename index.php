@@ -178,28 +178,28 @@
                 <div class="gallery_btn">
                     <div class="gallery">
                         <figure>
-                            <img src="img/img6.jpg" alt="img6">
+                            <a href="article.php"><img src="img/img6.jpg" alt="img6"></a>
                             <figcaption>
                                 <h5>Lexon Mino</h5>
                                 <p>L Pairable Speaker</p>
                             </figcaption>
                         </figure>
                         <figure>
-                            <img src="img/img7.jpg" alt="img7">
+                            <a href="article.php"><img src="img/img7.jpg" alt="img7"></a>
                             <figcaption>
                                 <h5>De Kooning </h5>
                                 <p>Framed Print</p>
                             </figcaption>
                         </figure>
                         <figure>
-                            <img src="img/img8.jpg" alt="img8">
+                            <a href="article.php"><img src="img/img8.jpg" alt="img8"></a>
                             <figcaption>
                                 <h5>Menorah</h5>
                                 <p>Candle Holder</p>
                             </figcaption>
                         </figure>
                         <figure>
-                            <img src="img/img9.jpg" alt="img9">
+                            <a href="article.php"><img src="img/img9.jpg" alt="img9"></a>
                             <figcaption>
                                 <h5>JWDA</h5>
                                 <p>Table Lamp</p>

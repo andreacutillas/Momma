@@ -101,30 +101,33 @@
                 <div class="gallery_btn">
                     <div class="gallery">
                         <figure>
-                            <img src="img/img12.jpg" alt="Pond">
+                            <a href="article.php"><img src="img/img12.jpg" alt="Pond"></a>
                             <figcaption>
                                 <h5>Pond</h5>
                                 <p>Mirror</p>
+                                <p id="p3">€383.95 includes VAT</p>
                             </figcaption>
                         </figure>
                         <figure>
-                            <img src="img/img13.jpg" alt="Plates">
+                            <a href="article.php"><img src="img/img13.jpg" alt="Plates"></a>
                             <figcaption>
                                 <h5>Plates</h5>
                                 <p>Set of 4</p>
+                                <p id="p3">€49.95 includes VAT</p>
                             </figcaption>
                         </figure>
                             <figure>
-                            <img src="img/img11.jpg" alt="Three Seasons">
+                            <a href="article.php"><img src="img/img11.jpg" alt="Three Seasons"></a>
                             <figcaption>
                                 <h5>Three Seasons</h5>
                                 <p>Russian Matryoshka</p>
+                                <p id="p3">€207.95 includes VAT</p>
                             </figcaption>
                         </figure>
                     </div>
                     <div class="total">
                         <h4>Total</h4>
-                        <p id="p2">€78.65</p>
+                        <p id="p2">€641.85</p>
                     </div>
                     <button class="btn_regular" onclick="#">Checkout</button>
                     <button class="btn_regular" onclick="window.location.href='./store.html'">Continue Shopping</button>

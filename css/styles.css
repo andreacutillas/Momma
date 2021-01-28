@@ -316,6 +316,7 @@ h4 {
     justify-content: center;
 
     padding: 10px 20px;
+    margin-bottom: 20px;
 
     width: 210px;
     height: 44px;
@@ -651,6 +652,12 @@ label {
 
 @media (max-width: 980px) {
 
+    h1 {
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+
     header,
     section{
         width: 90vw;
@@ -668,5 +675,23 @@ label {
 
     .gallery figure img {
         height: 500px;
+    }
+
+/*No funciona*/
+
+    .img_act {
+        width: 60%;
+        top: 10%;
+    }
+
+    .img_act .blur {
+        width: 247px;
+        height: 350px; 
+     }
+
+
+/**/
+     .gallery figure img:hover{
+        transform: none;
     }
 }

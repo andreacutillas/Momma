@@ -108,9 +108,9 @@
                 </div>
             </section>
                     
-            <section>
+            <section class="section_subtitle">
                 <div id="caja_about">
-                    <h7>Discover MoMA Design Store</h7>
+                    <h4>Discover MoMA Design Store</h4>
                     <p>At MoMA Design Store, you’ll find classics of yesterday and today, from humble masterpieces to transformative technologies. Design that elevates the everyday.
 
                     In 1932, MoMA was the first art museum to establish a curatorial department dedicated to Architecture and Design. As an extension of the Museum’s educational mission, MoMA Design Store exemplifies good design with a discerning selection of design objects highlighting the latest in materials, production and concepts from around the world. Every piece you’ll find at our stores has been reviewed and approved by MoMA’s curators. Some are represented in the Museum’s collection. Many are MoMA exclusives.
