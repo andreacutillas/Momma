@@ -9,12 +9,11 @@
     font-family: 'Montserrat', sans-serif;
     font-family: 'Roboto', sans-serif;
 
-    background-color: red;
 }
 
 header {
     z-index: 10;
-    width: 480px;
+    width: 980px;
     margin: auto;
     position: relative;
 }
@@ -647,7 +646,7 @@ label {
 
 
 /* Maquetación de la MEDIA QUERY */
-/* 
+
 
 @media (max-width: 980px) {
 
@@ -661,4 +660,4 @@ label {
         
     }
 
-} */
+}
