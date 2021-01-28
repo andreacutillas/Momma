@@ -657,6 +657,12 @@ label {
         line-height: 29px;
     }
 
+    h2 {
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    
 
     header,
     section{
@@ -668,13 +674,15 @@ label {
     }
 
     .gallery figure {
-        
         width: 100%;
-
     } 
 
     .gallery figure img {
         height: 500px;
+    }
+
+    #caja_about {
+        flex-wrap: nowrap;
     }
 
 /*No funciona*/
@@ -694,4 +702,44 @@ label {
      .gallery figure img:hover{
         transform: none;
     }
+}
+
+
+@media (max-width: 780px) {
+
+    h4 {
+        font-size: 20px;
+        line-height: 29px;
+    }
+
+    h5 {
+        font-size: 20px;
+    }
+
+    p {
+        line-height: 24px;
+        font-size: 16px;
+    }
+
+    #caja_about {
+        flex-wrap: wrap;
+    }
+
+    #caja_about div {
+        width: 100%;
+    }
+
+    #caja_about button, img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #caja_about img {
+        width: 80vw;
+    }
+
+    footer {
+        display: none;
+    }
+
 }
