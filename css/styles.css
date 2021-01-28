@@ -7,7 +7,8 @@
 	list-style: none;
 	text-decoration: none;
     font-family: 'Montserrat', sans-serif;
-    font-family: 'Roboto', sans-serif
+    font-family: 'Roboto', sans-serif;
+
 }
 
 header {
@@ -223,6 +224,33 @@ h4 {
     fill: #DA605A;
 }
 
+.btn_simple {
+    background-color: transparent;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: tomato;
+
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+}
+
+.btn_simple:hover,
+.btn_simple:focus {
+    background-size: 100% 2px; 
+}
+
+.form-popup p {
+    padding: 30px;
+    color: red;
+    font-size: 12px;
+}
+
 /* Maquetación CABECERA */
 
 .cabecera {
@@ -233,7 +261,7 @@ h4 {
 .cabecera img {
     z-index: -3;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     object-fit: cover;
     border-radius: 0;
 }
@@ -241,21 +269,7 @@ h4 {
 .caja_blur {
     width: 980px;
     margin: auto;
-}
-
-
-
-.gallery img:hover {
-    -moz-box-shadow: 0 0 10px #ccc;
-    -webkit-box-shadow: 0 0 10px #ccc;
-    box-shadow: 0 0 10px #ccc;
-}
-
-
-.gallery figure img:hover{
-    transform: scale(1.3);
-}
-    
+}  
     
 
 
@@ -356,17 +370,31 @@ section {
 }
 
 .gallery figure {
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
+    padding: 10px 0;
 }
 
 
 .gallery figure img {
     border-radius: 40px;
     width: 100%;
+    /* height: 100%; */
     object-fit: cover;
     
 }
+
+.gallery img:hover {
+    -moz-box-shadow: 0 0 10px #ccc;
+    -webkit-box-shadow: 0 0 10px #ccc;
+    box-shadow: 0 0 10px #ccc;
+}
+
+
+.gallery figure img:hover{
+    transform: scale(1.3);
+}
+  
 
 figcaption {
     width: 100%;
@@ -407,28 +435,6 @@ h5 {
     padding-bottom: 0;
 }
 
-.s
-
-.btn_simple {
-    background-color: transparent;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 24px;
-    color: tomato;
-
-    background-image: linear-gradient(currentColor, currentColor);
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 2px;
-    transition: background-size .3s;
-}
-
-.btn_simple:hover,
-.btn_simple:focus {
-    background-size: 100% 2px; 
-}
 
 .img_act {
     width: 100%;
@@ -511,6 +517,7 @@ h2 {
 
 .total {
     padding-bottom: 42px;
+    text-align: center;
 }
 
 footer {
@@ -639,14 +646,33 @@ label {
 }
 
 
-@media (max-width: 900px) {
-    
-    h1{
-    font-size: 24px;
-    line-height: 64px;
-}
-    
-    p {
-        font-size: 28px;
+/* Maquetación de la MEDIA QUERY */
+
+
+@media (max-width: 980px) {
+
+    header,
+    section{
+        width: 90vw;
     }
+
+    #section_img_center img {
+        width: 100%;
+    }
+
+    .gallery figure {
+        
+        width: 100%;
+
+    } 
+
+    .gallery figure img {
+        height: 500px;
+    }
+
+
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> master
