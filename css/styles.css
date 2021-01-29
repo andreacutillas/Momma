@@ -83,6 +83,10 @@ p {
   .dropdown:hover .dropdown-content {
     display: block;
   }
+
+  .drop_logo {
+      font-size: 24px;
+  }
   
   
 /* Maquetación INDEX */
@@ -781,7 +785,7 @@ label {
 @media (max-width: 760px) {
 
     .section_subtitle h4 {
-        font-size: 5px;
+        font-size: 20px;
         line-height: 29px;
     }
 
@@ -845,7 +849,8 @@ label {
     }
 
     .shipping {
-        width: 10%;
+        overflow: hidden;
+        max-width: 30%;
     }
 
     #menu {

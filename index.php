@@ -22,9 +22,10 @@
 
             <div class="dropdown" style="float:left;">
                 <button class="dropbtn">
-                    <figure><img src="img/dropdown.svg" alt="dropdown"></img></figure>
+                    <figure><img class="drop_logo" src="img/dropdown.svg" alt="dropdown"></img></figure>
                 </button>
                 <div class="dropdown-content" style="left:0;">
+                    <a href="index.php"><img src="img/logo.svg"></img></a>
                     <a href="store.php">STORE</a>
                     <a href="about.php">ABOUT</a>
                     <a href="cart.php">CART</a>
@@ -103,19 +104,19 @@
                 <?php
                     if(isset($_GET['error'])){
                         if($_GET['error'] ==1){
-                            echo "<p>El usuario o la contraseña no son correctos.</p>";
+                            echo "<p>You have entered an unvalid username or password</p>";
                         }
                         else if($_GET['error'] ==2){
-                            echo "<p>El usuario no está definido, accede en este formulario.</p>";
+                            echo "<p>This user doesn't exist</p>";
                         }
                         else if($_GET['error'] ==3){
-                            echo "<p>Hay problemas de conexión con base de datos. Inténtalo de nuevo más tarde.</p>";
+                            echo "<p>It looks like you are having trouble with your connection. Please try again later</p>";
                         }
                         else if($_GET['error'] ==4){
-                            echo "<p>Ese usuario no existe. Por favor, inténtalo de nuevo.</p>";
+                            echo "<p>This user doesn't exist. Try writing something different!.</p>";
                         }
                         else if($_GET['error'] ==5){
-                            echo "<p>Contraseña incorrecta. Por favor, inténtalo de nuevo.</p>";
+                            echo "<p>This password is incorrect. Try writing something different!</p>";
                         }
                     }
                 ?>
