@@ -849,8 +849,7 @@ label {
     }
 
     .shipping {
-        overflow: hidden;
-        max-width: 30%;
+        max-width: 50%;
     }
 
     #menu {
