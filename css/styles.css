@@ -297,6 +297,11 @@ h4 {
     font-size: 12px;
 }
 
+#form_section p {
+    color: red;
+    font-size: 12px;
+}
+
 /* Maquetación CABECERA */
 
 .cabecera {
@@ -666,11 +671,15 @@ footer {
     padding-top: 53px;
 }
 
+#form_section h1 {
+    padding-bottom: 0;
+}
+
 label {
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 28px;
 }
 

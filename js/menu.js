@@ -8,20 +8,16 @@ function openForm() {
     document.getElementById("myForm").style.display = "none";
 }
 
-// MENU RESPONSIVE
-
-
-
 // VALIDAR REGISTRO
 
 function validar(){
   'use strict';
-  if(document.getElementById('psw').value === document.getElementById('psw2').value){
-      return true;
+  if(document.getElementById('pasw').value === document.getElementById('pasw2').value){
+      return false;
   }
   else{
       document.getElementById('validaciones').style.display = 'block';
-      return false;
+      return true;
   }
 }
 

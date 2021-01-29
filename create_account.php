@@ -51,7 +51,7 @@
                         echo 'style="display: block;"';
                     }
                 ?>
-            >
+                >
                 <form action="seguridad.php" method="post" class="form-container">
                     <div id="cancel_contain">
                         <button type="button" class="btn_cancel" onclick="closeForm()">x</button>
@@ -118,39 +118,41 @@
                     <label for="psw2">Confirm Password</label>
                     <input type="password" id="psw2" placeholder="Confirm Password" name="psw2" required>
                     
+                    <?php
+                        if(isset($_GET['error2'])){
+                            if($_GET['error2'] == 6){
+                                echo "<p>Passwords no coinciden</p>";
+                            }
+                            else if($_GET['error2'] == 7){
+                                echo "<p>El usuario no está definido, regístrate en este formulario.</p>";
+                            }
+                            else if($_GET['error2'] == 8){
+                                echo "<p>Hay problemas de conexión con base de datos. Inténtalo de nuevo más tarde.</p>";
+                            }
+                            else if($_GET['error2'] == 9){
+                                echo "<p>The email address is already registered.</p>";
+                            }
+                            else if($_GET['error2'] == 10){
+                                echo "<p>Contraseña incorrecta. Por favor, inténtalo de nuevo.</p>";
+                            }
+                        }
+                    ?>   
                     
                     <div id="center_itm">
                         <button type="submit" class="btn_regular">Register</button>
                     </div>
 
                 </form>
-                <p id="validaciones" style="display:none">Las contraseñas no coinciden. Por favor, revísalas e intenta enviar de nuevo.</p>
+                <!-- <p id="validaciones" style="display:none">Las contraseñas no coinciden. Por favor, revísalas e intenta enviar de nuevo.</p> -->
+              
+                
 
+                
                 <div class="shipping">
                     <figure id="center_itm">
                         <img src="img/img14.jpg" alt="img14">
                     </figure>
                 </div>
-
-                <?php
-                    if(isset($_GET['error'])){
-                        if($_GET['error'] ==1){
-                            echo "<p>El usuario o la contraseña no son correctos.</p>";
-                        }
-                        else if($_GET['error'] ==2){
-                            echo "<p>El usuario no está definido, regístrate en este formulario.</p>";
-                        }
-                        else if($_GET['error'] ==3){
-                            echo "<p>Hay problemas de conexión con base de datos. Inténtalo de nuevo más tarde.</p>";
-                        }
-                        else if($_GET['error'] ==4){
-                            echo "<p>Ese usuario ya existe. Por favor, inténtalo de nuevo con otro nombre de usuario.</p>";
-                        }
-                        else if($_GET['error'] ==5){
-                            echo "<p>Contraseña incorrecta. Por favor, inténtalo de nuevo.</p>";
-                        }
-                    }
-                ?>   
             </section>  
         </main>
     

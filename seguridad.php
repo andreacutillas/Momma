@@ -10,7 +10,7 @@ if(isset($_POST['email']))
     }
     else{
         //echo "Conexión exitosa";
-        $peticion = 'SELECT pass FROM user WHERE mail="'.$_POST['email'].'"';
+        $peticion = 'SELECT pass FROM usuario WHERE mail="'.$_POST['email'].'"';
        // echo $peticion;
         $resultados = $mysqli->query($peticion);
         if($resultados->num_rows == 0)
@@ -18,13 +18,15 @@ if(isset($_POST['email']))
             header('Location: index.php?error=4');
         }
         else{
-            $pass = $resultados->fetch_object()->clave;
-            if($pass == $_POST['pass'])
+            $pass = $resultados->fetch_object()->pass;
+            
+            if($pass == $_POST['psw'])
             {
                 session_start();
                 $_SESSION['nombre'] = $_POST['email'];
                 header('Location: index.php');
             }
+
             else{
                 header('Location: index.php?error=5');
             }
@@ -35,6 +37,5 @@ if(isset($_POST['email']))
 else{
     header('Location: index.php?error=2');
 }
-
 
 ?>
