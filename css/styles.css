@@ -40,7 +40,7 @@ p {
 
 /* Dropdown */
 
-.dropbtn {
+/* .dropbtn {
     color: black;
     font-size: 16px;
     border: none;
@@ -67,7 +67,7 @@ p {
     
     min-width: 100vw;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 100;
+    z-index: 200;
   }
   
   .dropdown-content a {
@@ -336,7 +336,7 @@ h4 {
 
     background: rgba(255, 255, 255, 0.5);
 
-    filter: blur(12px);
+    backdrop-filter: blur(12px);
     border-radius: 40px;
 }
 
@@ -491,18 +491,6 @@ h5 {
     padding-bottom: 0;
 }
 
-
-.img_act {
-    width: 100%;
-    top: 18%;
-    left: 40px;
-    position: absolute;
-}
-
-.img_act .blur {
-   width: 347px;
-   height: 450px; 
-}
 
 .gallery_btn {
     display: flex;
@@ -764,15 +752,22 @@ label {
 
 /*No funciona*/
 
-    .img_act {
-        width: 60%;
-        top: 10%;
-    }
+    
 
-    .img_act .blur {
-        width: 247px;
-        height: 350px; 
-     }
+.caja_blur {
+    width: 60%;
+    margin: 30px;
+}  
+    
+
+
+.blur {
+    position: absolute;
+    width: 60%;
+    height: 40%;
+    top: 20%;
+
+}
 
 
 /**/
@@ -796,6 +791,19 @@ label {
     p {
         line-height: 24px;
         font-size: 16px;
+    }
+
+    .caja_blur {
+        width: 80%;
+    }  
+        
+    
+    
+    .blur {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    
     }
 
     /* Dropdown */

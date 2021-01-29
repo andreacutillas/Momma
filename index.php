@@ -46,7 +46,7 @@
             </div>
 -->
             <!-- Menu -->
-            <div id="menu">
+            <div class="menu_principal" id="menu">
                 <a class="logo" href="index.php"><img class="logo" src="img/Logo.svg" alt="logo"></a>
                 <nav class="list_menu">
                     <ul>
@@ -71,7 +71,7 @@
                 </nav>
                 <hr>
             </div>
-            
+
             <button onclick="abrirmenu()">
                 <div class="linea" id="linea1"></div>
                 <div class="linea" id="linea2"></div>
