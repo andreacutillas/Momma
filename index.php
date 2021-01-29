@@ -17,10 +17,10 @@
     </head>
 
     <body>
-        <header>
+        <header id="headerIndex">
             <!-- Dropdown -->
 
-            <div class="dropdown" style="float:left;">
+            <!--<div class="dropdown" style="float:left;">
                 <button class="dropbtn">
                     <figure><img class="drop_logo" src="img/dropdown.svg" alt="dropdown"></img></figure>
                 </button>
@@ -44,7 +44,7 @@
                         </a>
                 </div>
             </div>
-
+-->
             <!-- Menu -->
             <div id="menu">
                 <a class="logo" href="index.php"><img class="logo" src="img/Logo.svg" alt="logo"></a>
@@ -69,8 +69,13 @@
                         </a></li>
                     </ul>
                 </nav>
+                <hr>
             </div>
-
+            
+            <button onclick="abrirmenu()">
+                <div class="linea" id="linea1"></div>
+                <div class="linea" id="linea2"></div>
+            </button>
 
             <!-- Login  -->
             <div class="form-popup" id="myForm"  
