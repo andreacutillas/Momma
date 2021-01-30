@@ -11,12 +11,11 @@
             <!--FONTS-->
         <link rel="preconnect" href="https://fonts.gstatic.com/%22%3E"> 
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,900;1,400;1,700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-        
+            <!--FLICKITY-->
         <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-        
-        <script type="text/javascript" src="js/menu.js"></script>
-
         <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+            <!--JS-->
+        <script type="text/javascript" src="js/menu.js"></script>
     </head>
 
     <body>
