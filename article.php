@@ -1,3 +1,14 @@
+<?php
+    $url = $_SESSION['nombreurl'];
+    
+    echo $url;
+
+    $str = ucfirst(mb_substr($url, 7, null, 'UTF-8'));
+    echo $str;
+
+    $_SESSION['url'] = $str;
+?>
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -98,6 +109,12 @@
                         <label for="psw">Password</label>
                         <input type="password" id="psw" placeholder="Password" name="psw" required>
                     </div>
+                    <?php
+                        if(isset($_GET['url'])) {
+                            echo '<input type="hidden" name="url" value="'.$_GET['url'].'"';
+                        }
+
+                    ?>
                     <div id="center_itm">
                         <button type="submit" class="btn_regular">Log in</button>
                         <button  type="submit" class="btn_simple">Forgot password</button>

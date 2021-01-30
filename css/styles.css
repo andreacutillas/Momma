@@ -38,6 +38,10 @@ p {
     color: #000000;
 }
 
+.button_menu {
+    display: none;
+}
+
 /* Dropdown */
 
 /* .dropbtn {

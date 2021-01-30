@@ -95,6 +95,12 @@
                         <label for="psw">Password</label>
                         <input type="password" id="psw" placeholder="Password" name="psw" required>
                     </div>
+                    <?php
+                        if(isset($_GET['url'])) {
+                            echo '<input type="hidden" name="url" value="'.$_GET['url'].'"';
+                        }
+
+                    ?>
                     <div id="center_itm">
                         <button type="submit" class="btn_regular">Log in</button>
                         <button  type="submit" class="btn_simple">Forgot password</button>
@@ -119,6 +125,19 @@
                             echo "<p>This password is incorrect. Try writing something different!</p>";
                         }
                     }
+                ?>
+
+                <?php
+                    
+                    $url= $_SERVER["REQUEST_URI"];
+                    $_SESSION['nombreurl'] = $url;
+                    echo $url;
+
+                    $str = ucfirst(mb_substr($url, 7, null, 'UTF-8'));
+                    echo $str;
+
+                    $_SESSION['nameurl'] = $str;
+
                 ?>
             </div>
         </header>

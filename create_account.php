@@ -79,7 +79,7 @@
                         echo 'style="display: block;"';
                     }
                 ?>
-                >
+            >
                 <form action="seguridad.php" method="post" class="form-container">
                     <div id="cancel_contain">
                         <button type="button" class="btn_cancel" onclick="closeForm()">x</button>
@@ -95,6 +95,8 @@
                         <label for="psw">Password</label>
                         <input type="password" id="psw" placeholder="Password" name="psw" required>
                     </div>
+
+
                     <div id="center_itm">
                         <button type="submit" class="btn_regular">Log in</button>
                         <button  type="submit" class="btn_simple">Forgot password</button>
@@ -130,23 +132,34 @@
                 <h5>Already have an account?</h5>
                 <button class="btn_simple">Log In</button>
                 
-                <form action="creating_account.php" method="post" onsubmit="return validar()" class="form-container">
-                    <label for="first_name">First Name</label>
-                    <input type="text" id="first_name" placeholder="First Name" name="first_name" required>
-            
-                    <label for="last_name">Last Name</label>
-                    <input type="text" id="last_name" placeholder="Last Name" name="last_name" required>
-            
-                    <label for="email">Email</label>
-                    <input type="text" id="email" placeholder="Enter Email" name="email" required>
-            
-                    <label for="psw">Password</label>
-                    <input type="password" id="psw" placeholder="Enter Password" name="psw" required>
+                <form action="creating_account.php" method="post" class="form-container" onsubmit="return validar()">
 
-                    <label for="psw2">Confirm Password</label>
-                    <input type="password" id="psw2" placeholder="Confirm Password" name="psw2" required>
-                    
-                    <?php
+                    <p>
+                        <label for="first_name">First Name</label>
+                        <input type="text" id="first_name" placeholder="First Name" name="first_name" required>
+                
+                        <label for="last_name">Last Name</label>
+                        <input type="text" id="last_name" placeholder="Last Name" name="last_name" required>
+                
+                        <label for="email2">Email</label>
+                        <input type="text" id="signup_email" placeholder="Enter Email" name="signup_email" required>
+                
+                        <label for="psw">Password</label>
+                        <input type="password" id="signup_psw" placeholder="Enter Password" name="signup_psw" required>
+
+                        <label for="psw2">Confirm Password</label>
+                        <input type="password" id="signup_pswconfirm" placeholder="Confirm Password" name="signup_pswconfirm" required>  
+                        
+                        <div id="center_itm">
+                            <button type="submit" class="btn_regular">Register</button>
+                        </div>
+
+                    </p>
+
+                </form>
+                <p id="validaciones" style="display:none">Las contraseñas no coinciden. Por favor, revísalas e intenta enviar de nuevo.</p>
+
+                <?php
                         if(isset($_GET['error2'])){
                             if($_GET['error2'] == 6){
                                 echo "<p>Passwords no coinciden</p>";
@@ -164,14 +177,7 @@
                                 echo "<p>Contraseña incorrecta. Por favor, inténtalo de nuevo.</p>";
                             }
                         }
-                    ?>   
-                    
-                    <div id="center_itm">
-                        <button type="submit" class="btn_regular">Register</button>
-                    </div>
-
-                </form>
-                <!-- <p id="validaciones" style="display:none">Las contraseñas no coinciden. Por favor, revísalas e intenta enviar de nuevo.</p> -->
+                    ?> 
               
                 
 

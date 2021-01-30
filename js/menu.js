@@ -7,7 +7,6 @@ function openForm() {
   function closeForm() {
     document.getElementById("myForm").style.display = "none";
 }
-
 // RESPONSIVE
 
 $(window).on('load',function(){
@@ -69,18 +68,34 @@ function abrirmenu() {
       btnmenudos.style.transform = " rotate(45deg)";
       
   }
-}
-
-// VALIDAR REGISTRO
+} REGISTRO
 
 function validar(){
   'use strict';
-  if(document.getElementById('pasw').value === document.getElementById('pasw2').value){
-      return false;
+  console.log(document.getElementById('signup_psw').value);
+  console.log(document.getElementById('signup_pswconfirm').value);
+  if(document.getElementById('signup_psw').value === document.getElementById('signup_pswconfirm').value){
+      return true;
   }
   else{
+      
       document.getElementById('validaciones').style.display = 'block';
-      return true;
+      return false;
+  }
+}
+
+function ValidateEmail(inputText){
+  var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  if(inputText.value.match(mailformat)){
+    alert("Valid email address!");
+    document.form1.text1.focus();
+    return true;
+    }
+    else
+    {
+    alert("You have entered an invalid email address!");
+    document.form1.text1.focus();
+    return false;
   }
 }
 

@@ -95,6 +95,14 @@
                         <label for="psw">Password</label>
                         <input type="password" id="psw" placeholder="Password" name="psw" required>
                     </div>
+
+                    <?php
+                        if(isset($_GET['url'])) {
+                            echo '<input type="hidden" name="url" value="'.$_GET['url'].'"';
+                        }
+
+                    ?>
+
                     <div id="center_itm">
                         <button type="submit" class="btn_regular">Log in</button>
                         <button  type="submit" class="btn_simple">Forgot password</button>
@@ -130,6 +138,18 @@
                 <div>
                     <h3>Hello!</h3>
                     <p id="p2">(Name)</p>
+
+                    <?php
+                    session_start();
+                    echo "<h3> PHP List All Session Variables</h3>";
+                    
+
+                    foreach ($_SESSION as $key=>$val)
+                    echo $key." ".$val."<br/>";
+                    
+                    echo $pass." ".' es muy';
+                ?>
+
                 </div>
 
                 </section>
