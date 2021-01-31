@@ -37,10 +37,10 @@ p {
     line-height: 28px;
     color: #000000;
 }
-
+/* 
 .button_menu {
     display: none;
-}
+} */
 
 /* Dropdown */
 
@@ -93,8 +93,7 @@ p {
   }
   
   
-/* Maquetación INDEX */
-
+/* Maquetación INDEX */ 
 
 #menu {
     width: 100%;
@@ -823,6 +822,36 @@ label {
     
     }
 
+
+    /*Carousel*/
+
+    #carousel {
+        width: 100%;
+    }
+
+    #carousel_text {
+        width: 100%;
+        padding-top: 60px;
+    }
+
+    #carousel_text button {
+        margin-top: 40px;
+    }
+
+    /*Form*/
+
+    #form_section .form-container {
+        padding: 23px 50px;
+    }
+
+    .shipping {
+        max-width: 50%;
+    }
+
+    footer {
+        display: none;
+    }
+
     /* Dropdown */
 
     /* .dropdown figure {
@@ -850,106 +879,350 @@ label {
         width: 80vw;
     } */
 
-    /* Dropdown Vrs2 */
+    @media ( max-width: 500px ) {
 
-    header button {
-        display: flex;
-        position: fixed;
+
+        #menu {
+            width: 100%;
+            flex-direction: column;
+            justify-content: space-between;
+            position: absolute;
+            z-index: 20;
+            padding-top: 54px;
+            align-items: center;
         
-        left: 20px;
-        top: 20px;
-        z-index: 40;
+        }
+    
+        #menu a {
+            font-size: 20px;
+            
+        }
+    
+        #menu .logo {
+            padding-top: 30px;
+        }
+    
+        #caja_about img{
+            width: 100%;
+        }
+    
+        .list_menu {
+            width: 100%;
+        }
+    
+        .list_menu ul {
+            flex-direction: column;
+            padding: 40px 0;
+        }
+    
+        .list_menu ul li {
+            padding: 25px 0;
+        }
+    
+        .button_menu {
+            display: flex;
+            position: fixed;
+            
+            left: 20px;
+            top: 20px;
+            z-index: 90;
+            
+            width: 30px;
+            height: 20px;
+            
+            background: transparent;
+            outline: none;
+        }
+    
+        .button_menu .linea {
+            background: #373737;
+            width: 30px;
+            height: 4px;
+            
+            position: absolute;
+            top: 50%;
+            left: 0;
+            border-radius: 20px;
+            
+            transition: transform 0.5s;
+        }
+    
+        #linea1 {
+            transform: translateY(-7px);
+        }
         
-        width: 30px;
-        height: 20px;
+        #linea2 {
+            transform: translateY(7px);
+        }
+    
+        .abro button { background-color: #da605ab9; }
+    
+        header {
+            z-index: 30;
+            top: 0;
+            left: -100%;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #DA605A;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+            
+            transition: 1s;
+    
+        }
+    
+        header {
+            position: fixed;
+        }
+    
+    
+    /* 
+        header button {
+            display: flex;
+            position: fixed;
+            
+            left: 20px;
+            top: 20px;
+            z-index: 40;
+            
+            width: 30px;
+            height: 20px;
+            
+            background: transparent;
+            outline: none;
+        }
         
-        background: transparent;
-        outline: none;
+        header button .linea {
+            background: #373737;
+            width: 30px;
+            height: 4px;
+            
+            position: absolute;
+            top: 50%;
+            left: 0;
+            border-radius: 20px;
+            
+            transition: transform 0.5s;
+        }
+        
+        header button #linea1 {
+            transform: translateY(-7px);
+        }
+        
+        header button #linea2 {
+            transform: translateY(7px);
+        }
+    
+        #about_secction .link_here {
+            font-size: 18px;
+        }
+        
+        .abro button { background-color: #da605ab9; }
+        
+        header #menu_principal,
+        #headerWork #menu_principal {
+            z-index: 30;
+            top: 0;
+            left: -100%;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #DA605A;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+            
+            transition: 1s;
+        } 
+    
+        #headerWork #menu_principal,
+        #headerAchive #menu_principal,
+        #headerAbout #menu_principal   {
+            position: fixed;
+        }
+    
+        
+        header a {
+            font-size: 25px;
+        } 
+    
+        header .logo_menu {
+            padding-top: 63px;
+            color: white;
+            font-size: 45px;
+        }
+    
+        header nav {
+            padding-top: 190px;
+            flex-direction: column;
+            position: absolute;
+        }
+    
+        header nav ul {
+            flex-direction: column;
+        }
+    
+        header nav ul li{
+            padding-bottom: 40px;
+        }
+        
+        header .menu hr {
+            display: none;
+        }
+        
+        footer .menu .logo_menu {
+            font-size: 20px;
+        }
+    
+        figure figcaption {
+            opacity: 1;
+            top: auto;
+            background-color: none;
+        }
+    
+        #gallery figure{
+            padding-bottom: 90px;
+        }
+        
+        #gallery figure figcaption{
+            opacity: 1;
+            top:auto;
+            padding: 0;
+            background-color: none;
+            height: 0;
+            width: 100%;
+        }
+    
+    
+        #gallery figure figcaption p{
+            padding-top: 0;
+            font-size: 19px;
+            letter-spacing: 0.1em;
+            line-height: 20px;
+            color: #373737;
+        }
+    
+        #gallery figure figcaption a {
+            color: #DA605A;
+        }
+    
+        .line_img {
+            display: none;
+        }
+    
+        #gallery{
+            padding-bottom: 0;
+        }
+    
+        #headerAnother .logo_menu {
+            padding-top: 0;
+            color: #DA605A;
+            font-size: 25px;
+        }
+    
+        #headerAnother .menu {
+            padding: 10px;
+            height: 100%;
+        }
+    
+        #headerAnother nav {
+            display: none;
+        }
+    
+        #back {
+            padding-top: 50px;
+            padding-bottom: 10px;
+            padding-left: 13px;
+        }
+    
+        #back a{
+            color: #DA605A;
+        }
+    
+        .border {
+            display: none;
+        }
+    
+    
+        #other_proyects #gallery {
+            padding-top: 30px;
+        }
+    
+        #other_proyects #gallery figure {
+            padding-bottom: 140px;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    
+        #other_proyects #gallery figure:last-child {
+            padding-bottom: 100px;
+        }
+    
+        #another .gallery_without_figcaption figure {
+            padding-bottom: 0;
+        }
+    
+        #another .gallery_without_figcaption figure:last-child {
+            padding-bottom: 30px;
+        }
+    
+        footer .menu {
+            padding: 0;
+            height: 70px;
+        }
+    
+        h5 {
+            padding-top: 0px;
+            font-size: 23px;
+        }
+    
+        h6 {
+            padding: 33px;
+            font-size: 18px;
+        }
+    
+        #info_2 {
+            padding: 0 10px 0 10px;
+        }
+    
+        #info_2 h3{
+            font-size: 18px;
+        } 
+    
+        #info_2 p{
+            font-size: 14px;
+        } 
+    
+        #another h2 {
+            font-size: 19px;
+        }
+        
+        #logo {
+            width: 90%;
+            padding-top: 54%;
+        }
+    
+        h2 {
+            font-size: 20px;
+        }
+    
+        h3 {
+            font-size: 15px;
+        }
+    
+        #projects_achive #gallery figure{
+            padding-bottom: 10px;
+            padding-top: 0;
+        }
+    
+        #projects_achive #gallery{
+            padding-bottom: 30px;
+        }
+    
+        #about_secction h6 {
+            padding-top: 90px;
+        } */
+    
     }
     
-    header button .linea {
-        background: #373737;
-        width: 30px;
-        height: 4px;
-        
-        position: absolute;
-        top: 50%;
-        left: 0;
-        border-radius: 20px;
-        
-        transition: transform 0.5s;
-    }
     
-    header button #linea1 {
-        transform: translateY(-7px);
-    }
-    
-    header button #linea2 {
-        transform: translateY(7px);
-    }
-
-    #about_secction .link_here {
-        font-size: 18px;
-    }
-    
-    .abro button { background-color: #da605ab9; }
-    
-    header #menu,
-    #headerStore #menu {
-        z-index: 30;
-        top: 0;
-        left: -100%;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: #DA605A;
-        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-        
-        transition: 1s;
-    } 
-
-    #headerStore #menu,
-    #headerAbout #menu,
-    #headerCart #menu   {
-        position: fixed;
-    }
-
-    
-    header .menu_principal hr {
-        display: none;
-    }
-
-    /*Carousel*/
-
-    #carousel {
-        width: 100%;
-    }
-
-    #carousel_text {
-        width: 100%;
-        padding-top: 60px;
-    }
-
-    #carousel_text button {
-        margin-top: 40px;
-    }
-
-    /*Form*/
-
-    #form_section .form-container {
-        padding: 23px 50px;
-    }
-
-    .shipping {
-        max-width: 50%;
-    }
-
-    #menu {
-        display: none;
-    }
-
-    footer {
-        display: none;
-    }
 
 }
