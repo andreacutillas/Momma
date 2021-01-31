@@ -1,7 +1,7 @@
-
 <?php
+
     if(!isset($_POST['email'])){
-        header('Location: '.$_SESSION['nameurl'].'?error=2');
+        header('Location: index.php?error=2');
     }
 
     $mysqli = new mysqli('localhost', 'root', '', 'moma');
@@ -19,22 +19,23 @@
 
     if($resultados->num_rows == 0)
     {
-        header('Location: '.$_SESSION['nameurl'].'.?error=4');
+        header('Location: index.php?error=4');
     }
 
     $pass = $resultados->fetch_object()->pass;
 
+    session_start();
     if($pass == $_POST['psw'])
-    {
-        session_start();
+    {   
+        
         $_SESSION['nombre'] = $_POST['email'];
 
-        header("Location: ".$_SESSION['nombreurl']); 
+        header("Location: ". $_SESSION['url']);
+
     }
 
     else{
-
-        header('Location: '.$_SESSION['nameurl'].'?error=5');
+        header("Location:" .$_SESSION['url']."?error=5");
     }
 
 
