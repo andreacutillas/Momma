@@ -375,10 +375,12 @@ section {
     justify-content: space-between;
 }
 
+
 .gallery figure {
     display: flex;
     flex-direction: column;
     padding: 10px 0;
+    width: 100%;
 }
 
 
@@ -683,18 +685,19 @@ label {
         width: 100%;
     }
 
-     #gallery_1 .gallery figure {
+    #gallery_1 .gallery {
+        flex-wrap: nowrap;
+    }
+
+     .gallery figure {
         width: 50%;
      }
 
-     #gallery_1 .gallery figure img {
+     .gallery figure img {
         height: 400px;
         padding: 20px;
      }
 
-     #gallery_1 .gallery figure:last-child {
-        width: 100%;
-     }
 
     /*.gallery figure img {
         height: 50%;
@@ -712,6 +715,10 @@ label {
 
     .section_header .gallery_btn figure {
         padding-bottom: 0px;
+    }
+
+    #caja_about {
+        flex-wrap: nowrap;
     }
 
     #discover, #caja_about div {
@@ -733,8 +740,9 @@ label {
         transform: none;
     }
 
-
-
+    .gallery h5 {
+        padding-top: 0;
+    }
 
 
 @media (max-width: 760px) {
@@ -753,9 +761,30 @@ label {
         line-height: 40px;
     }
 
-    #gallery_1 .gallery figure img {
+    .gallery figure img {
         height: 300px;
      }
+
+     #gallery_1 .gallery {
+        flex-wrap: wrap;
+    }
+
+     #caja_about {
+        flex-wrap: wrap;
+    }
+
+    #caja_about img {
+        width: 100%;
+    }
+
+    #discover button, #discover img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #gallery_1 .gallery figure:last-child {
+        width: 100%;
+    }
 /*
      .section_subtitle h4 {
         font-size: 20px;
@@ -869,6 +898,7 @@ label {
 
     .list_menu {
         width: 100%;
+        justify-content: center;
     }
 
     .list_menu ul {
@@ -942,6 +972,10 @@ label {
         width: 50%;
     }
 
+    .gallery figcaption p {
+        display: none;
+    }
+
     #gallery_1 .gallery figure img {
         height: 200px;
      }
@@ -950,10 +984,7 @@ label {
          padding: 10px;
      }
 
-     #discover button {
-         margin-left: auto;
-         margin-right: auto;
-     }
+     
     
     }
     
