@@ -1,3 +1,14 @@
+<?php
+    $url = $_SESSION['nombreurl'];
+    
+    echo $url;
+
+    $str = ucfirst(mb_substr($url, 7, null, 'UTF-8'));
+    echo $str;
+
+    $_SESSION['url'] = $str;
+?>
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -11,17 +22,44 @@
             <!--FONTS-->
         <link rel="preconnect" href="https://fonts.gstatic.com/%22%3E"> 
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,900;1,400;1,700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-        
+            <!--FLICKITY-->
         <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-        
-        <script type="text/javascript" src="js/menu.js"></script>
-
         <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+            <!--JS-->
+        <script type="text/javascript" src="js/menu.js"></script>
     </head>
 
     <body>
 
         <header>
+
+        <!-- Dropdown -->
+
+        <div class="dropdown" style="float:left;">
+                <button class="dropbtn">
+                    <figure><img class="drop_logo" src="img/dropdown.svg" alt="dropdown"></img></figure>
+                </button>
+                <div class="dropdown-content" style="left:0;">
+                    <a href="index.php"><img src="img/logo.svg"></img></a>
+                    <a href="store.php">STORE</a>
+                    <a href="about.php">ABOUT</a>
+                    <a href="cart.php">CART</a>
+                    <?php
+                                session_start();
+                                if(isset($_SESSION['nombre'])){
+                                    echo '<a class="open-button" href="profile.php">'; 
+                                }
+                                else {
+                                    echo '<a class="open-button" onclick="openForm()">';
+                                }
+                            ?>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 0C9.06087 0 10.0783 0.421427 10.8284 1.17157C11.5786 1.92172 12 2.93913 12 4C12 5.06087 11.5786 6.07828 10.8284 6.82843C10.0783 7.57857 9.06087 8 8 8C6.93913 8 5.92172 7.57857 5.17157 6.82843C4.42143 6.07828 4 5.06087 4 4C4 2.93913 4.42143 1.92172 5.17157 1.17157C5.92172 0.421427 6.93913 0 8 0V0ZM8 10C12.42 10 16 11.79 16 14V16H0V14C0 11.79 3.58 10 8 10Z" fill="black"/>
+                            </svg>
+                        </a>
+                </div>
+            </div>
+            
             <!-- Menu -->
             <div id="menu">
                 <a class="logo" href="index.php"><img class="logo" src="img/Logo.svg" alt="logo"></a>
@@ -71,6 +109,12 @@
                         <label for="psw">Password</label>
                         <input type="password" id="psw" placeholder="Password" name="psw" required>
                     </div>
+                    <?php
+                        if(isset($_GET['url'])) {
+                            echo '<input type="hidden" name="url" value="'.$_GET['url'].'"';
+                        }
+
+                    ?>
                     <div id="center_itm">
                         <button type="submit" class="btn_regular">Log in</button>
                         <button  type="submit" class="btn_simple">Forgot password</button>
@@ -80,19 +124,19 @@
                 <?php
                     if(isset($_GET['error'])){
                         if($_GET['error'] ==1){
-                            echo "<p>El usuario o la contraseña no son correctos.</p>";
+                            echo "<p>You have entered an unvalid username or password</p>";
                         }
                         else if($_GET['error'] ==2){
-                            echo "<p>El usuario no está definido, accede en este formulario.</p>";
+                            echo "<p>This user doesn't exist</p>";
                         }
                         else if($_GET['error'] ==3){
-                            echo "<p>Hay problemas de conexión con base de datos. Inténtalo de nuevo más tarde.</p>";
+                            echo "<p>It looks like you are having trouble with your connection. Please try again later</p>";
                         }
                         else if($_GET['error'] ==4){
-                            echo "<p>Ese usuario no existe. Por favor, inténtalo de nuevo.</p>";
+                            echo "<p>This user doesn't exist. Try writing something different!.</p>";
                         }
                         else if($_GET['error'] ==5){
-                            echo "<p>Contraseña incorrecta. Por favor, inténtalo de nuevo.</p>";
+                            echo "<p>This password is incorrect. Try writing something different!</p>";
                         }
                     }
                 ?>
@@ -203,28 +247,28 @@
                 <div class="gallery_btn">
                     <div class="gallery">
                         <figure>
-                            <img src="img/img6.jpg" alt="img6">
+                            <a href="article.php"><img src="img/img6.jpg" alt="img6"></a>
                             <figcaption>
                                 <h5>Lexon Mino</h5>
                                 <p>L Pairable Speaker</p>
                             </figcaption>
                         </figure>
                         <figure>
-                            <img src="img/img7.jpg" alt="img7">
+                            <a href="article.php"><img src="img/img7.jpg" alt="img7"></a>
                             <figcaption>
                                 <h5>De Kooning </h5>
                                 <p>Framed Print</p>
                             </figcaption>
                         </figure>
                         <figure>
-                            <img src="img/img8.jpg" alt="img8">
+                            <a href="article.php"><img src="img/img8.jpg" alt="img8"></a>
                             <figcaption>
                                 <h5>Menorah</h5>
                                 <p>Candle Holder</p>
                             </figcaption>
                         </figure>
                         <figure>
-                            <img src="img/img9.jpg" alt="img9">
+                            <a href="article.php"><img src="img/img9.jpg" alt="img9"></a>
                             <figcaption>
                                 <h5>JWDA</h5>
                                 <p>Table Lamp</p>

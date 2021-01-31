@@ -1,3 +1,15 @@
+<?php
+    session_start();
+    $url = $_SESSION['nombreurl'];
+    
+    echo $url;
+
+    $str = ucfirst(mb_substr($url, 7, null, 'UTF-8'));
+    echo $str;
+
+    $_SESSION['url'] = $str;
+?>
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -11,7 +23,7 @@
             <!--FONTS-->
         <link rel="preconnect" href="https://fonts.gstatic.com/%22%3E"> 
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,900;1,400;1,700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-
+            <!--JS-->
         <script type="text/javascript" src="js/menu.js"></script>
 
     
@@ -19,12 +31,40 @@
 
     <body>
         <header>
+
+        <!-- Dropdown -->
+
+        <div class="dropdown" style="float:left;">
+                <button class="dropbtn">
+                    <figure><img class="drop_logo" src="img/dropdown.svg" alt="dropdown"></img></figure>
+                </button>
+                <div class="dropdown-content" style="left:0;">
+                    <a href="index.php"><img src="img/logo.svg"></img></a>
+                    <a id="underline" href="store.php">STORE</a>
+                    <a href="about.php">ABOUT</a>
+                    <a href="cart.php">CART</a>
+                    <?php
+                                session_start();
+                                if(isset($_SESSION['nombre'])){
+                                    echo '<a class="open-button" href="profile.php">'; 
+                                }
+                                else {
+                                    echo '<a class="open-button" onclick="openForm()">';
+                                }
+                            ?>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 0C9.06087 0 10.0783 0.421427 10.8284 1.17157C11.5786 1.92172 12 2.93913 12 4C12 5.06087 11.5786 6.07828 10.8284 6.82843C10.0783 7.57857 9.06087 8 8 8C6.93913 8 5.92172 7.57857 5.17157 6.82843C4.42143 6.07828 4 5.06087 4 4C4 2.93913 4.42143 1.92172 5.17157 1.17157C5.92172 0.421427 6.93913 0 8 0V0ZM8 10C12.42 10 16 11.79 16 14V16H0V14C0 11.79 3.58 10 8 10Z" fill="black"/>
+                            </svg>
+                        </a>
+                </div>
+            </div>
+
             <!-- Menu -->
             <div id="menu">
                 <a class="logo" href="index.php"><img class="logo" src="img/Logo.svg" alt="logo"></a>
                 <nav class="list_menu">
                     <ul>
-                        <li><a class="btn-store" href="store.php">STORE</a></li>
+                        <li><a id="underline" class="btn-store" href="store.php">STORE</a></li>
                         <li><a class="btn-about" href="about.php">ABOUT</a></li>
                         <li><a class="btn-cart" href="cart.php">CART</a></li>
                         <li>
@@ -68,6 +108,7 @@
                         <label for="psw">Password</label>
                         <input type="password" id="psw" placeholder="Password" name="psw" required>
                     </div>
+
                     <div id="center_itm">
                         <button type="submit" class="btn_regular">Log in</button>
                         <button  type="submit" class="btn_simple">Forgot password</button>
@@ -77,19 +118,19 @@
                 <?php
                     if(isset($_GET['error'])){
                         if($_GET['error'] ==1){
-                            echo "<p>El usuario o la contraseña no son correctos.</p>";
+                            echo "<p>You have entered an unvalid username or password</p>";
                         }
                         else if($_GET['error'] ==2){
-                            echo "<p>El usuario no está definido, accede en este formulario.</p>";
+                            echo "<p>This user doesn't exist</p>";
                         }
                         else if($_GET['error'] ==3){
-                            echo "<p>Hay problemas de conexión con base de datos. Inténtalo de nuevo más tarde.</p>";
+                            echo "<p>It looks like you are having having trouble with your connection. Please try again later</p>";
                         }
                         else if($_GET['error'] ==4){
-                            echo "<p>Ese usuario no existe. Por favor, inténtalo de nuevo.</p>";
+                            echo "<p>This user doesn't exist. Try writing something different!.</p>";
                         }
                         else if($_GET['error'] ==5){
-                            echo "<p>Contraseña incorrecta. Por favor, inténtalo de nuevo.</p>";
+                            echo "<p>This password is incorrect. Try writing something different!</p>";
                         }
                     }
                 ?>
@@ -102,15 +143,15 @@
                 <div class="gallery_btn">
                     <div class="gallery">
                     <figure>
-                        <img src="img/img21.jpg" alt="Eames® Plywood">
+                        <a href="article.php"><img src="img/img21.jpg" alt="Eames® Plywood"></a>
                         <figcaption>
-                            <h5>Eames® Plywood</h5>
-                            <p id="p4">Elephant 75th Anniversary</p>
+                            <h5>Eames®</h5>
+                            <p id="p4">Plywood Elephant</p>
                             <p id="p3">€1,965 includes VAT</p>
                         </figcaption>
                     </figure>
                     <figure>
-                        <img src="img/img20.jpg" alt="HAY Ellipse">
+                        <a href="article.php"><img src="img/img20.jpg" alt="HAY Ellipse"></a>
                         <figcaption>
                             <h5>HAY Ellipse </h5>
                             <p id="p4">Trays</p>
@@ -118,15 +159,15 @@
                         </figcaption>
                     </figure>
                     <figure>
-                        <img src="img/img19.jpg" alt="Sophie Monet">
+                        <a href="article.php"><img src="img/img19.jpg" alt="Sophie Monet"></a>
                         <figcaption>
                             <h5>Sophie Monet</h5>
-                            <p id="p4">Pine Wood Earrings</p>
+                            <p id="p4">Earrings</p>
                             <p id="p3">€76.95 includes VAT</p>
                         </figcaption>
                     </figure>
                     <figure>
-                        <img src="img/img18.jpg" alt="Caracas">
+                        <a href="article.php"><img src="img/img18.jpg" alt="Caracas"></a>
                         <figcaption>
                             <h5>Caracas</h5>
                             <p id="p4">Desktop Mobile</p>
@@ -135,7 +176,7 @@
                     </figure>
                     
                     <figure>
-                        <img src="img/img6.jpg" alt="Lexon Mino L">
+                        <a href="article.php"><img src="img/img6.jpg" alt="Lexon Mino L"></a>
                         <figcaption>
                             <h5>Lexon Mino L</h5>
                             <p id="p4">Pairable Speaker</p>
@@ -143,7 +184,7 @@
                         </figcaption>
                     </figure>
                     <figure>
-                        <img src="img/img7.jpg" alt="De Kooning">
+                        <a href="article.php"><img src="img/img7.jpg" alt="De Kooning"></a>
                         <figcaption>
                             <h5>De Kooning</h5>
                             <p id="p4">Framed Print</p>
@@ -151,7 +192,7 @@
                         </figcaption>
                     </figure>
                     <figure>
-                        <img src="img/img8.jpg" alt="Menorah">
+                        <a href="article.php"><img src="img/img8.jpg" alt="Menorah"></a>
                         <figcaption>
                             <h5>Menorah</h5>
                             <p id="p4">Candle Holder</p>
@@ -159,7 +200,7 @@
                         </figcaption>
                     </figure>
                     <figure>
-                        <img src="img/img9.jpg" alt="JWDA">
+                        <a href="article.php"><img src="img/img9.jpg" alt="JWDA"></a>
                         <figcaption>
                             <h5>JWDA</h5>
                             <p id="p4">Table Lamp</p>
@@ -168,15 +209,15 @@
                     </figure>
                     
                     <figure>
-                        <img src="img/img11.jpg" alt="Three Seasons">
+                        <a href="article.php"><img src="img/img11.jpg" alt="Three Seasons"></a>
                         <figcaption>
                             <h5>Three Seasons</h5>
-                            <p id="p4">Russian Matryoshka</p>
+                            <p id="p4">Matryoshka</p>
                             <p id="p3">€207.95 includes VAT</p>
                         </figcaption>
                     </figure>
                     <figure>
-                        <img src="img/img12.jpg" alt="Pond">
+                        <a href="article.php"><img src="img/img12.jpg" alt="Pond"></a>
                         <figcaption>
                             <h5>Pond</h5>
                             <p id="p4">Mirror</p>
@@ -184,7 +225,7 @@
                         </figcaption>
                     </figure>
                     <figure>
-                        <img src="img/img13.jpg" alt="Plates">
+                        <a href="article.php"><img src="img/img13.jpg" alt="Plates"></a>
                         <figcaption>
                             <h5>Plates</h5>
                             <p id="p4">Set of 4</p>
@@ -192,7 +233,7 @@
                         </figcaption>
                     </figure>
                     <figure>
-                        <img src="img/img15.jpg" alt="anOrdain">
+                        <a href="article.php"><img src="img/img15.jpg" alt="anOrdain"></a>
                         <figcaption>
                             <h5>anOrdain</h5>
                             <p id="p4">Model 1 Watch</p>
@@ -232,7 +273,7 @@
                 </a>
                 <nav class="list_menu">
                     <ul>
-                        <li><a class="btn-store" href="store.php">STORE</a></li>
+                        <li><a id="underline_footer" class="btn-store" href="store.php">STORE</a></li>
                         <li><a class="btn-about" href="about.php">ABOUT</a></li>
                         <li><a class="btn-cart" href="cart.php">CART</a></li>
                     </ul>

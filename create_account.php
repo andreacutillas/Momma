@@ -11,13 +11,41 @@
             <!--FONTS-->
         <link rel="preconnect" href="https://fonts.gstatic.com/%22%3E"> 
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,900;1,400;1,700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-       
+            <!--JS-->
         <script type="text/javascript" src="js/menu.js"></script>
     
     </head>
 
     <body>
         <header>
+
+        <!-- Dropdown -->
+
+        <div class="dropdown" style="float:left;">
+                <button class="dropbtn">
+                    <figure><img class="drop_logo" src="img/dropdown.svg" alt="dropdown"></img></figure>
+                </button>
+                <div class="dropdown-content" style="left:0;">
+                    <a href="index.php"><img src="img/logo.svg"></img></a>
+                    <a href="store.php">STORE</a>
+                    <a href="about.php">ABOUT</a>
+                    <a href="cart.php">CART</a>
+                    <?php
+                                session_start();
+                                if(isset($_SESSION['nombre'])){
+                                    echo '<a class="open-button" href="profile.php">'; 
+                                }
+                                else {
+                                    echo '<a class="open-button" onclick="openForm()">';
+                                }
+                            ?>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 0C9.06087 0 10.0783 0.421427 10.8284 1.17157C11.5786 1.92172 12 2.93913 12 4C12 5.06087 11.5786 6.07828 10.8284 6.82843C10.0783 7.57857 9.06087 8 8 8C6.93913 8 5.92172 7.57857 5.17157 6.82843C4.42143 6.07828 4 5.06087 4 4C4 2.93913 4.42143 1.92172 5.17157 1.17157C5.92172 0.421427 6.93913 0 8 0V0ZM8 10C12.42 10 16 11.79 16 14V16H0V14C0 11.79 3.58 10 8 10Z" fill="black"/>
+                            </svg>
+                        </a>
+                </div>
+            </div>
+            
             <!-- Menu -->
             <div id="menu">
                 <a class="logo" href="index.php"><img class="logo" src="img/Logo.svg" alt="logo"></a>
@@ -67,6 +95,8 @@
                         <label for="psw">Password</label>
                         <input type="password" id="psw" placeholder="Password" name="psw" required>
                     </div>
+
+
                     <div id="center_itm">
                         <button type="submit" class="btn_regular">Log in</button>
                         <button  type="submit" class="btn_simple">Forgot password</button>
@@ -76,19 +106,19 @@
                 <?php
                     if(isset($_GET['error'])){
                         if($_GET['error'] ==1){
-                            echo "<p>El usuario o la contraseña no son correctos.</p>";
+                            echo "<p>You have entered an unvalid username or password</p>";
                         }
                         else if($_GET['error'] ==2){
-                            echo "<p>El usuario no está definido, accede en este formulario.</p>";
+                            echo "<p>This user doesn't exist</p>";
                         }
                         else if($_GET['error'] ==3){
-                            echo "<p>Hay problemas de conexión con base de datos. Inténtalo de nuevo más tarde.</p>";
+                            echo "<p>It looks like you are having trouble with your connection. Please try again later</p>";
                         }
                         else if($_GET['error'] ==4){
-                            echo "<p>Ese usuario no existe. Por favor, inténtalo de nuevo.</p>";
+                            echo "<p>This user doesn't exist. Try writing something different!.</p>";
                         }
                         else if($_GET['error'] ==5){
-                            echo "<p>Contraseña incorrecta. Por favor, inténtalo de nuevo.</p>";
+                            echo "<p>This password is incorrect. Try writing something different!</p>";
                         }
                     }
                 ?>
@@ -102,55 +132,61 @@
                 <h5>Already have an account?</h5>
                 <button class="btn_simple">Log In</button>
                 
-                <form action="creating_account.php" method="post" onsubmit="return validar()" class="form-container">
-                    <label for="first_name">First Name</label>
-                    <input type="text" id="first_name" placeholder="First Name" name="first_name" required>
-            
-                    <label for="last_name">Last Name</label>
-                    <input type="text" id="last_name" placeholder="Last Name" name="last_name" required>
-            
-                    <label for="email">Email</label>
-                    <input type="text" id="email" placeholder="Enter Email" name="email" required>
-            
-                    <label for="psw">Password</label>
-                    <input type="password" id="psw" placeholder="Enter Password" name="psw" required>
+                <form action="creating_account.php" method="post" class="form-container" onsubmit="return validar()">
 
-                    <label for="psw2">Confirm Password</label>
-                    <input type="password" id="psw2" placeholder="Confirm Password" name="psw2" required>
-                    
-                    
-                    <div id="center_itm">
-                        <button type="submit" class="btn_regular">Registrarse</button>
-                    </div>
+                    <p>
+                        <label for="first_name">First Name</label>
+                        <input type="text" id="first_name" placeholder="First Name" name="first_name" required>
+                
+                        <label for="last_name">Last Name</label>
+                        <input type="text" id="last_name" placeholder="Last Name" name="last_name" required>
+                
+                        <label for="email2">Email</label>
+                        <input type="text" id="signup_email" placeholder="Enter Email" name="signup_email" required>
+                
+                        <label for="psw">Password</label>
+                        <input type="password" id="signup_psw" placeholder="Enter Password" name="signup_psw" required>
+
+                        <label for="psw2">Confirm Password</label>
+                        <input type="password" id="signup_pswconfirm" placeholder="Confirm Password" name="signup_pswconfirm" required>  
+                        
+                        <div id="center_itm">
+                            <button type="submit" class="btn_regular">Register</button>
+                        </div>
+
+                    </p>
 
                 </form>
                 <p id="validaciones" style="display:none">Las contraseñas no coinciden. Por favor, revísalas e intenta enviar de nuevo.</p>
 
+                <?php
+                        if(isset($_GET['error2'])){
+                            if($_GET['error2'] == 6){
+                                echo "<p>Passwords no coinciden</p>";
+                            }
+                            else if($_GET['error2'] == 7){
+                                echo "<p>El usuario no está definido, regístrate en este formulario.</p>";
+                            }
+                            else if($_GET['error2'] == 8){
+                                echo "<p>Hay problemas de conexión con base de datos. Inténtalo de nuevo más tarde.</p>";
+                            }
+                            else if($_GET['error2'] == 9){
+                                echo "<p>The email address is already registered.</p>";
+                            }
+                            else if($_GET['error2'] == 10){
+                                echo "<p>Contraseña incorrecta. Por favor, inténtalo de nuevo.</p>";
+                            }
+                        }
+                    ?> 
+              
+                
+
+                
                 <div>
                     <figure id="center_itm">
-                        <img src="img/img14.jpg" alt="img14">
+                        <img class="shipping" src="img/img14.jpg" alt="img14">
                     </figure>
                 </div>
-
-                <?php
-                    if(isset($_GET['error'])){
-                        if($_GET['error'] ==1){
-                            echo "<p>El usuario o la contraseña no son correctos.</p>";
-                        }
-                        else if($_GET['error'] ==2){
-                            echo "<p>El usuario no está definido, regístrate en este formulario.</p>";
-                        }
-                        else if($_GET['error'] ==3){
-                            echo "<p>Hay problemas de conexión con base de datos. Inténtalo de nuevo más tarde.</p>";
-                        }
-                        else if($_GET['error'] ==4){
-                            echo "<p>Ese usuario ya existe. Por favor, inténtalo de nuevo con otro nombre de usuario.</p>";
-                        }
-                        else if($_GET['error'] ==5){
-                            echo "<p>Contraseña incorrecta. Por favor, inténtalo de nuevo.</p>";
-                        }
-                    }
-                ?>   
             </section>  
         </main>
     
