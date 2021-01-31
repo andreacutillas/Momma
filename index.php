@@ -141,7 +141,7 @@
             </section>
             
             <!-- Sección 1 -->
-            <section>
+            <section id="gallery_1">
                 <div class="gallery">
                     <figure>
                         <a href="article.php"><img src="img/img2.jpg" alt="img2"></a>
