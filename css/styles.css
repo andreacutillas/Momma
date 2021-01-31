@@ -999,6 +999,10 @@ label {
     .section_header h1 {
         padding-bottom: 32px;
     }
+
+    #footer_text {
+        width: 200px;
+    }
     
     }
     
