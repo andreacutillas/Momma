@@ -719,19 +719,12 @@ label {
      .gallery figure img:hover{
         transform: none;
     }
-}
+
 
 
 
 
 @media (max-width: 760px) {
-
-    
-/*
-     .section_subtitle h4 {
-        font-size: 20px;
-        line-height: 29px;
-    }
 
     h5 {
         font-size: 18px;
@@ -741,6 +734,13 @@ label {
         line-height: 24px;
         font-size: 16px;
     }
+/*
+     .section_subtitle h4 {
+        font-size: 20px;
+        line-height: 29px;
+    }
+
+    
 /*
     .caja_blur {
         width: 80%;
@@ -807,92 +807,97 @@ label {
         line-height: 29px;
     }
 
-        header {
-            width: 100vw;
-        }
+    header {
+        width: 100vw;
+    }
 
-        #menu {
-            flex-direction: column;
-            justify-content: initial;
-            position: absolute;
-            z-index: 20;
-            padding-top: 54px;
-            align-items: center;
+    #menu {
+        flex-direction: column;
+        justify-content: initial;
+        position: absolute;
+        z-index: 20;
+        padding-top: 54px;
+        align-items: center;
+        left: -100%;
 
-            background-color: #DA605A;
-            width: 100%;
-            height: 100vh;
+        background-color: #DA605A;
+        width: 100%;
+        height: 100vh;
 
-            transition: 1s;
+        transition: 1s;
+    
+    }
+
+    #menu a {
+        font-size: 20px;
         
-        }
-    
-        #menu a {
-            font-size: 20px;
-            
-        }
-    
-        #menu .logo {
-            padding-top: 20px;
-        }
-    
-        #caja_about img{
-            width: 100%;
-        }
-    
-        .list_menu {
-            width: 100%;
-        }
-    
-        .list_menu ul {
-            flex-direction: column;
-            padding: 40px 0;
-            width: 100%;
-        }
-    
-        .list_menu ul li {
-            padding: 25px 0;
-        }
-    
-        .button_menu {
-            display: flex;
-            position: fixed;
-            
-            left: 20px;
-            top: 20px;
-            z-index: 90;
-            
-            width: 30px;
-            height: 20px;
-            
-            background: transparent;
-            outline: none;
-        }
-    
-        .button_menu .linea {
-            background: black;
-            width: 30px;
-            height: 4px;
-            
-            position: absolute;
-            top: 50%;
-            left: 0;
-            border-radius: 20px;
-            
-            transition: transform 0.5s;
-        }
-    
-        #linea1 {
-            transform: translateY(-7px);
-        }
+    }
+
+    #menu .logo {
+        padding-top: 20px;
+    }
+
+    #caja_about img{
+        width: 100%;
+    }
+
+    .list_menu {
+        width: 100%;
+    }
+
+    .list_menu ul {
+        flex-direction: column;
+        padding: 40px 0;
+        width: 100%;
+    }
+
+    .list_menu ul li {
+        padding: 25px 0;
+    }
+
+    .button_menu {
+        display: flex;
+        position: fixed;
         
-        #linea2 {
-            transform: translateY(7px);
-        }
+        left: 20px;
+        top: 20px;
+        z-index: 90;
+        
+        width: 30px;
+        height: 20px;
+        
+        background: transparent;
+        outline: none;
+    }
+
+    .button_menu .linea {
+        background: black;
+        width: 30px;
+        height: 4px;
+        
+        position: absolute;
+        top: 50%;
+        left: 0;
+        border-radius: 20px;
+        
+        transition: transform 0.5s;
+    }
+
+    #linea1 {
+        transform: translateY(-7px);
+    }
     
-        header {
-            position: fixed;
-        }
+    #linea2 {
+        transform: translateY(7px);
+    }
+
+    header {
+        position: fixed;
+    }
+
+    .blur h1, .blur p {
+        padding: 5px;
+    }
     
     }
     
