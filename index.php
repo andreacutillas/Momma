@@ -211,7 +211,7 @@
 
             <section>
                 <div id="caja_about">
-                    <div>
+                    <div id="discover">
                         <div>
                             <h2>Discover what sets MoMA Design Store apart.</h2>
                             <p>Do you know how we choose products for MoMA Design Store? Or what informs our unique point of view? Discover what sets MoMA Design Store    apart in our What Makes Us Different story.</p>
