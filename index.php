@@ -136,7 +136,10 @@
                                 </svg>
                             </button>
                         </div>
-                        </div id="prueba" ></div>
+                        </div id="prueba">
+                            <hr>
+                        
+                        </div>
                     </div>
                 
                 </div>
