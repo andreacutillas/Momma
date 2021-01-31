@@ -68,7 +68,9 @@ function abrirmenu() {
       btnmenudos.style.transform = " rotate(45deg)";
       
   }
-} REGISTRO
+} 
+
+REGISTRO
 
 function validar(){
   'use strict';

@@ -368,9 +368,9 @@ section {
     padding-bottom: 100px;
 }
 
-.gallery{
+.gallery {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     width: 100%;
     justify-content: space-between;
 }
@@ -446,7 +446,7 @@ h5 {
 
 .gallery_btn {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     flex-direction: column;
     align-items: center;
 }
@@ -689,6 +689,10 @@ label {
         flex-wrap: nowrap;
     }
 
+    .gallery, .gallery_btn {
+        flex-wrap: wrap;
+    }
+
      .gallery figure {
         width: 50%;
      }
@@ -886,6 +890,10 @@ label {
         padding-top: 20px;
     }
 
+    #underline {
+        text-decoration: underline white;
+    }
+
     #caja_about img{
         width: 100%;
     }
@@ -984,7 +992,13 @@ label {
          padding: 10px;
      }
 
-     
+     .section_header {
+        padding-top: 62px ;
+    }
+    
+    .section_header h1 {
+        padding-bottom: 32px;
+    }
     
     }
     
