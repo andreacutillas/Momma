@@ -289,7 +289,7 @@ span{
 }
 
 .caja_blur {
-    width: 980px;
+    width: 80vw;
     margin: auto;
 }  
     
@@ -662,23 +662,13 @@ footer {
 /* Maquetación de la MEDIA QUERY */
 
 @media (max-width: 1200px) {
+    
     .blur {
         width: 40%;
     }
 }
 
 @media (max-width: 1000px) {
-
-    /* h1 {
-        font-size: 24px;
-        line-height: 29px;
-    }
-
-    h2 {
-        font-size: 24px;
-        line-height: 29px;
-    } */
-
 
     header,
     section{
