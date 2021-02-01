@@ -289,7 +289,7 @@ span{
 }
 
 .caja_blur {
-    width: 80vw;
+    width: 980px;
     margin: auto;
 }  
     
@@ -385,29 +385,30 @@ section {
 
 .gallery {
     display: flex;
-    flex-wrap: nowrap;
     width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
     justify-content: space-between;
+    display: flex;
 }
 
 
 .gallery figure {
-    display: flex;
-    flex-direction: column;
-    padding: 10px 0;
     width: 100%;
+    padding: 10px 0;
+    padding-bottom: 65px;
 }
 
 
 .gallery figure img {
     border-radius: 40px;
     width: 100%;
-    /* height: 100%; */
     object-fit: cover;
     
 }
 
 .gallery img:hover {
+    width: 100%;
     -moz-box-shadow: 0 0 10px #ccc;
     -webkit-box-shadow: 0 0 10px #ccc;
     box-shadow: 0 0 10px #ccc;
@@ -417,9 +418,6 @@ section {
 .gallery figure img:hover{
     transform: scale(1.3);
 }
-
-
-  
 
 figcaption {
     width: 100%;
@@ -463,13 +461,11 @@ h5 {
 
 .gallery_btn {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
 }
 
-.gallery_btn .gallery {
-    flex-wrap: nowrap;
-}
 
 #section_btn .gallery {
     padding-bottom: 45px;
@@ -667,6 +663,19 @@ footer {
    flex-direction: column;
 }
 
+/* Maquetación SHOP.html */
+
+#gallery_shop .gallery figure {
+    width: 30%;
+}
+
+/* Maquetación ABOUT.html */
+
+#section_about figure,
+#gallery_shop .gallery  {
+    padding-bottom: 0;
+}
+
 
 /* Maquetación de la MEDIA QUERY */
 
@@ -687,7 +696,7 @@ footer {
     .blur {
         width: 85%;
     }
-}
+
 
     #section_img_center img {
         width: 100%;

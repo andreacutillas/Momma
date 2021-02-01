@@ -118,7 +118,7 @@
         
         <main>
             <!-- Sección 1 -->
-            <section id="section_btn" class="section_header">
+            <section id="section_about" class="section_header">
                 <h1>MoMA Design Store</h1>
                 <div class="gallery_btn">
                     <div>
