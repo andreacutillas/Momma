@@ -13,6 +13,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,900;1,400;1,700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
             <!--JS-->
         <script type="text/javascript" src="js/menu.js"></script>
+        <script type="text/javascript" src="js/sign_up.js"></script>
     
     </head>
 
@@ -122,20 +123,25 @@
 
                     <p>
                         <label for="first_name">First Name</label>
-                        <input type="text" id="first_name" placeholder="First Name" name="first_name" required>
+                        <input class="input_text" type="text" id="first_name" placeholder="First Name" name="first_name" required>
                 
                         <label for="last_name">Last Name</label>
-                        <input type="text" id="last_name" placeholder="Last Name" name="last_name" required>
+                        <input class="input_text" type="text" id="last_name" placeholder="Last Name" name="last_name" required>
                 
-                        <label for="email2">Email</label>
-                        <input type="text" id="signup_email" placeholder="Enter Email" name="signup_email" required>
+                        <label for="signup_email">Email</label>
+                        <input onclick="Trash_Error()" onkeyup="ValidateEmail()" class="input_text" type="text" id="signup_email" placeholder="Enter Email" name="signup_email" required>
+                        <span id="emailOK"></span>
                 
                         <label for="psw">Password</label>
-                        <input type="password" id="signup_psw" placeholder="Enter Password" name="signup_psw" required>
+                        <input onclick="Trash_Error()" onkeyup="check()" class="input_text" type="password" id="signup_psw" placeholder="Enter Password" name="signup_psw" required>
 
                         <label for="psw2">Confirm Password</label>
-                        <input type="password" id="signup_pswconfirm" placeholder="Confirm Password" name="signup_pswconfirm" required>  
-                        
+                        <input onclick="Trash_Error()" onkeyup="check()" class="input_text" type="password" id="signup_pswconfirm" placeholder="Confirm Password" name="signup_pswconfirm" required> 
+                        <span id='message'></span>
+
+                        <p id="validaciones" style="display:none">Las contraseñas no coinciden. Por favor, revísalas e intenta enviar de nuevo.</p>
+                        <p id="validaciones2" style="display:none">Email incorrecto. Por favor, revísalas e intenta enviar de nuevo.</p>
+
                         <div id="center_itm">
                             <button type="submit" class="btn_regular">Register</button>
                         </div>
@@ -143,7 +149,7 @@
                     </p>
 
                 </form>
-                <p id="validaciones" style="display:none">Las contraseñas no coinciden. Por favor, revísalas e intenta enviar de nuevo.</p>
+               
 
                 <?php
                         if(isset($_GET['error2'])){

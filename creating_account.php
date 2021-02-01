@@ -1,5 +1,5 @@
 <?php
-if(isset($_POST['email']))
+if(isset($_POST['signup_email']))
 {
     $mysqli = new mysqli('localhost', 'root', '', 'moma');
     $mysqli->set_charset('utf8');
@@ -10,7 +10,7 @@ if(isset($_POST['email']))
     }
     else{
         //echo "Conexión exitosa";
-        $peticion = 'SELECT mail FROM usuario WHERE mail="'.$_POST['email'].'"';
+        $peticion = 'SELECT mail FROM usuario WHERE mail="'.$_POST['signup_email'].'"';
        // echo $peticion;
         $resultados = $mysqli->query($peticion);
         if($resultados->num_rows == 0)
@@ -26,7 +26,7 @@ if(isset($_POST['email']))
                 $mysqli->query($peticionEscritura);
                 
                 session_start();
-                $_SESSION['nombre'] = $_POST['email'];
+                $_SESSION['nombre'] = $_POST['signup_email'];
                 header('Location: index.php');
 
                 
@@ -41,6 +41,5 @@ if(isset($_POST['email']))
 else{
     header('Location: create_account.php?error2=7');
 }
-
 
 ?>
