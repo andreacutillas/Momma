@@ -217,7 +217,7 @@
             </section>
 
             <section>
-                <div id="caja_about">
+                <div id="caja_about" class="discover">
                     <div>
                         <div>
                             <h2>Discover what sets MoMA Design Store apart.</h2>

@@ -417,6 +417,8 @@ section {
 .gallery figure img:hover{
     transform: scale(1.3);
 }
+
+
   
 
 figcaption {
@@ -461,9 +463,12 @@ h5 {
 
 .gallery_btn {
     display: flex;
-    flex-wrap: nowrap;
     flex-direction: column;
     align-items: center;
+}
+
+.gallery_btn .gallery {
+    flex-wrap: nowrap;
 }
 
 #section_btn .gallery {
@@ -475,7 +480,11 @@ h5 {
     top: 8%;
 }
 
-#caja_about {
+#section_subtitle #wrap {
+    display: block;
+}
+
+.discover {
     display: flex;
     flex-wrap: wrap;
 }
@@ -688,7 +697,7 @@ footer {
         flex-wrap: nowrap;
     }
 
-    .gallery, .gallery_btn {
+    .gallery_btn .gallery {
         flex-wrap: wrap;
     }
 
@@ -724,8 +733,13 @@ footer {
         flex-wrap: nowrap;
     }
 
-    #discover, #caja_about div {
+    .discover, #caja_about div {
         width: 100%;
+    }
+
+    .discover button {
+        margin-left: auto;
+        margin-right: auto;
     }
 
     /*Form*/
