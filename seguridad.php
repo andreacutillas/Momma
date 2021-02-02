@@ -27,11 +27,9 @@
     session_start();
     if($pass == $_POST['psw'])
     {   
-        
         $_SESSION['nombre'] = $_POST['email'];
 
         header("Location: ". $_SESSION['url']);
-
     }
 
     else{
