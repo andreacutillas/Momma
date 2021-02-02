@@ -118,7 +118,7 @@
         </header>
 
         <main>
-            <section class="section_header">
+            <section class="section_header" id="section_profile">
                 <h1>My Profile</h1>
             
                 <div id="nombre_profile">
