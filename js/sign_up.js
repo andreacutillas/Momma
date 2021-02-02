@@ -1,8 +1,8 @@
 // REGISTRO
 
 function check(){
-  if (document.getElementById('psw').value ==
-    document.getElementById('psw_confirm').value) {
+  if (document.getElementById('signup_psw').value ==
+    document.getElementById('signup_pswconfirm').value) {
     document.getElementById('message').style.color = 'green';
     document.getElementById('message').innerHTML = 'matching';
   } else {
@@ -12,7 +12,7 @@ function check(){
 }
 
 function ValidateEmail() {
-  var email_valor = document.getElementById('email').value;
+  var email_valor = document.getElementById('signup_email').value;
   valido = document.getElementById('emailOK');
 
   var mailformat = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -26,9 +26,9 @@ function ValidateEmail() {
 }
 
 function validar(){
-  var psw_1 = document.getElementById('psw').value;
-  var psw_2 = document.getElementById('psw_confirm').value;
-  var email_valor= document.getElementById('email').value;
+  var psw_1 = document.getElementById('signup_psw').value;
+  var psw_2 = document.getElementById('signup_pswconfirm').value;
+  var email_valor= document.getElementById('signup_email').value;
 
   var mailformat = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   var match;

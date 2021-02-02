@@ -125,18 +125,7 @@
                     <h3>Hello!</h3>
 
                     <?php
-                        session_start();
-
-                        // $mysqli = new mysqli('localhost', 'root', '', 'moma');
-                        // $mysqli->set_charset('utf8');
-
-                        // $peticion = 'SELECT * FROM usuario WHERE mail="'.$_POST['email'].'"';
-
-                        // $resultados = $mysqli->query($peticion);
-
-                        // $idName = $resultados->fetch_object()->idName;
-
-                        // echo '<p id="p2">'.$idName.'</p>';
+                        echo '<p id="p2">'.$_SESSION['nombre'].'</p>';
                         
                      ?>
 

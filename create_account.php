@@ -129,15 +129,15 @@
                         <label for="last_name">Last Name</label>
                         <input class="input_text" type="text" id="last_name" placeholder="Last Name" name="last_name" required>
                 
-                        <label for="email">Email</label>
-                        <input onclick="Trash_Error()" onkeyup="ValidateEmail()" class="input_text" type="text" id="email" placeholder="Enter Email" name="email" required>
+                        <label for="signup_email">Email</label>
+                        <input onclick="Trash_Error()" onkeyup="ValidateEmail()" class="input_text" type="text" id="signup_email" placeholder="Enter Email" name="signup_email" required>
                         <span id="emailOK"></span>
                 
-                        <label for="psw">Password</label>
-                        <input onclick="Trash_Error()" onkeyup="check()" class="input_text" type="password" id="psw" placeholder="Enter Password" name="psw" required>
+                        <label for="signup_psw">Password</label>
+                        <input onclick="Trash_Error()" onkeyup="check()" class="input_text" type="password" id="signup_psw" placeholder="Enter Password" name="signup_psw" required>
 
-                        <label for="psw_confirm">Confirm Password</label>
-                        <input onclick="Trash_Error()" onkeyup="check()" class="input_text" type="password" id="psw_confirm" placeholder="Confirm Password" name="" required> 
+                        <label for="signup_pswconfirm">Confirm Password</label>
+                        <input onclick="Trash_Error()" onkeyup="check()" class="input_text" type="password" id="signup_pswconfirm" placeholder="Confirm Password" name="signup_pswconfirm" required> 
                         <span id='message'></span>
 
                         <p id="validaciones" style="display:none">Las contraseñas no coinciden. Por favor, revísalas e intenta enviar de nuevo.</p>

@@ -263,6 +263,12 @@ span{
     font-size: 12px;
 }
 
+h6 {
+    font-family: Montserrat;
+    font-size: 15px;
+    color: #000000;
+}
+
 /* Maquetación CABECERA */
 
 .cabecera {
@@ -376,7 +382,7 @@ section {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
-    align-items: top;
+    align-items: initial;
     justify-content: space-between;
 }
 
@@ -641,7 +647,7 @@ footer {
 .section_header #nombre_profile #p2 {
     text-decoration: none;
     padding: 0; 
-    font-size: 36px;
+    font-size: 26px;
 }
 
 #section_profile {

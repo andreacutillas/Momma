@@ -103,6 +103,7 @@
                         }
                         else if($_GET['error'] ==5){
                             echo "<p>This password is incorrect. Try writing something different!</p>";
+
                         }
                     }
                 ?>
