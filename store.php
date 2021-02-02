@@ -1,27 +1,3 @@
-<?php
-    // echo $_SERVER['HTTP_HOST'];
-    // $_SESSION['u'] = $_SERVER['HTTP_HOST'];
-
-
-    // $_SESSION['url'] = $_SERVER['REQUEST_URI'];
-    // echo $_SESSION['url'];
-
-    // $str = ucfirst(mb_substr($_SESSION['url'], 7, null, 'UTF-8'));
-    // $_SESSION['u'] = $str
-
-    // $_SESSION['url'] = strtolower($str);
-    // echo $_SESSION['url'];
-
-    // header("Location: ".$_SESSION['url']); 
-    
-    // $_SESSION['url'] = 'store.php';
-    // echo $_SESSION['url'];
-
-
-    
-
-?>
-
 <!DOCTYPE html>
 
 <html lang="en">

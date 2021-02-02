@@ -51,7 +51,6 @@
                         </li>
                     </ul>
                 </nav>
-                <!-- <hr> -->
             </div>
 
             <button class="button_menu" onclick="abrirmenu()">

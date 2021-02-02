@@ -8,7 +8,7 @@
     $mysqli->set_charset('utf8');
 
     if($mysqli->connect_errno){
-        //echo "Conexión fallida";
+    //echo "Conexión fallida";
         header('Location: index.php?error=3');
     }
 

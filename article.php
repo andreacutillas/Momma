@@ -138,22 +138,7 @@
                                 <img src="img/img17.jpg" alt="Crystal Glass">
                             </div>
                         </div>
-                        
-                        <!-- <div class="carousel carousel-nav" data-flickity='{ "asNavFor": ".carousel-main", "contain": true, "pageDots": false }'>
-                    
-                            <div class="carousel-cell">
-                                <img src="img/img22.jpg" alt="Crystal Glass">
-                            </div>
-                        
-                            <div class="carousel-cell">
-                                <img src="img/img16.jpg" alt="Crystal Glass">
-                            </div>
-                        
-                            <div class="carousel-cell">
-                                <img src="img/img17.jpg" alt="Crystal Glass">
-                            </div>
-                        </div> -->
-                        
+                                                                        
                     </div>
                     
                     <div id="carousel_text">
@@ -306,6 +291,5 @@
         </footer>
     
     </body>
-    
-    
+        
 </html>
