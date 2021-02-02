@@ -389,13 +389,19 @@ section {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    display: flex;
 }
 
+#gallery_1 .gallery figure {
+    width: 30%;
+    padding-bottom: 0;
+}
+
+.gallery_btn .gallery figure {
+    width: 23%;
+    padding-bottom: 0;
+}
 
 .gallery figure {
-    width: 100%;
-    padding: 10px 0;
     padding-bottom: 65px;
 }
 
@@ -476,6 +482,13 @@ h5 {
     top: 8%;
 }
 
+#section_img_center img {
+    width: 100%;
+    border-radius: 40px;
+
+}
+
+
 #section_subtitle #wrap {
     display: block;
 }
@@ -505,6 +518,11 @@ h5 {
 
 #caja_about p {
     padding-bottom: 80px;
+}
+
+#caja_about img {
+    width: 50%;
+    border-radius: 40px;
 }
 
 .contenido {

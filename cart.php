@@ -116,7 +116,7 @@
                 <div class="gallery_btn" id="gallery_shop">
                     <div class="gallery">
                         <figure>
-                            <a href="article.php"><img src="img/img12.jpg" alt="Pond"></a>
+                            <a href="article.php"><img src="img/imge12.jpg" alt="Pond"></a>
                             <figcaption>
                                 <h5>Pond</h5>
                                 <p>Mirror</p>
@@ -124,7 +124,7 @@
                             </figcaption>
                         </figure>
                         <figure>
-                            <a href="article.php"><img src="img/img13.jpg" alt="Plates"></a>
+                            <a href="article.php"><img src="img/imge13.jpg" alt="Plates"></a>
                             <figcaption>
                                 <h5>Plates</h5>
                                 <p>Set of 4</p>
@@ -132,7 +132,7 @@
                             </figcaption>
                         </figure>
                             <figure>
-                            <a href="article.php"><img src="img/img11.jpg" alt="Three Seasons"></a>
+                            <a href="article.php"><img src="img/imge11.jpg" alt="Three Seasons"></a>
                             <figcaption>
                                 <h5>Three Seasons</h5>
                                 <p>Matryoshka</p>
