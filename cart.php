@@ -132,9 +132,9 @@
                             </figcaption>
                         </figure>
                             <figure>
-                            <a href="article.php"><img src="img/imge11.jpg" alt="Three Seasons"></a>
+                            <a href="article.php"><img src="img/imge11.jpg" alt="Seasons"></a>
                             <figcaption>
-                                <h5>Three Seasons</h5>
+                                <h5>Seasons</h5>
                                 <p>Matryoshka</p>
                                 <p id="p3">€207.95 includes VAT</p>
                             </figcaption>
@@ -145,7 +145,7 @@
                         <p id="p2">€641.85</p>
                     </div>
                     <button class="btn_regular" onclick="#">Checkout</button>
-                    <button class="btn_regular" onclick="window.location.href='./store.html'">Continue Shopping</button>
+                    <button class="btn_regular" onclick="window.location.href='store.php'">Continue Shopping</button>
                 </div>
             </section>
         </main>

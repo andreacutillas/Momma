@@ -157,9 +157,9 @@
                             </figcaption>
                         </figure>
                         <figure>
-                            <a href="article.php"><img src="img/img19.jpg" alt="Sophie Monet"></a>
+                            <a href="article.php"><img src="img/img19.jpg" alt="Sophie"></a>
                             <figcaption>
-                                <h5>Sophie Monet</h5>
+                                <h5>Sophie</h5>
                                 <p id="p4">Earrings</p>
                                 <p id="p3">€76.95 includes VAT</p>
                             </figcaption>
@@ -207,15 +207,15 @@
                         </figure>
                         
                         <figure>
-                            <a href="article.php"><img src="img/img11.jpg" alt="Three Seasons"></a>
+                            <a href="article.php"><img src="img/img11.png" alt="Seasons"></a>
                             <figcaption>
-                                <h5>Three Seasons</h5>
+                                <h5>Seasons</h5>
                                 <p id="p4">Matryoshka</p>
                                 <p id="p3">€207.95 includes VAT</p>
                             </figcaption>
                         </figure>
                         <figure>
-                            <a href="article.php"><img src="img/img12.jpg" alt="Pond"></a>
+                            <a href="article.php"><img src="img/img12.png" alt="Pond"></a>
                             <figcaption>
                                 <h5>Pond</h5>
                                 <p id="p4">Mirror</p>
@@ -223,7 +223,7 @@
                             </figcaption>
                         </figure>
                         <figure>
-                            <a href="article.php"><img src="img/img13.jpg" alt="Plates"></a>
+                            <a href="article.php"><img src="img/img13.png" alt="Plates"></a>
                             <figcaption>
                                 <h5>Plates</h5>
                                 <p id="p4">Set of 4</p>
