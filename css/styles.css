@@ -41,6 +41,7 @@ p {
 .button_menu {
     display: none;
 }
+
   
   
 /* Maquetación INDEX */ 
@@ -687,6 +688,14 @@ footer {
     width: 65%;
 }
 
+.carousel-cell {
+    margin-right: 40px;
+}
+
+.carousel-cell img { 
+    height: 52vw; 
+}
+
 #caja_article {
     display: flex; 
     flex-wrap: wrap;
@@ -896,6 +905,9 @@ footer {
     #carousel {
         width: 100%;
     }
+
+    .carousel-cell img { height: 90vw; }
+    
 }
 
 @media ( max-width: 500px ) {

@@ -52,7 +52,6 @@
                         </li>
                     </ul>
                 </nav>
-                <!-- <hr> -->
             </div>
 
             <button class="button_menu" onclick="abrirmenu()">
@@ -73,7 +72,7 @@
                         <button type="button" class="btn_cancel" onclick="closeForm()">x</button>
                     </div>
                     <h4>Sign in to your Account</h4>
-                    <h6>New to MoMA Design Store?</h6>
+                    <h5>New to MoMA Design Store?</h5>
                     <button  type="submit" class="btn_simple" onclick="window.location.href='create_account.php'">Create an account</button>
 
                     <div id="left_itm">
@@ -118,25 +117,29 @@
             <section id="form_section" class="section_header">
                 <h1>Create an Account</h1>
                 <h5>Already have an account?</h5>
-                <?php
-                    session_start();
-                    $_SESSION['url'] = $_SERVER['REQUEST_URI'];
+                
+                    
+                    <?php
+                                session_start();
+                                $_SESSION['url'] = $_SERVER['REQUEST_URI'];
 
-                    if(isset($_SESSION['nombre'])){
-                        echo '<a class="open-button" href="profile.php">'; 
-                    }
-                    else {
-                        // Verificar y restaurar variable url
-                        if (strstr($_SESSION['url'], '?')){
-
-                            $_SESSION['url'] = substr($_SESSION['url'], 0, strpos($_SESSION['url'], "?"));
-                        }
-                        echo '<a class="open-button" onclick="openForm()">';
-                        }
-                ?>
-                <button class="btn_simple">Log in</button>
-                </a>
-            
+                                if(isset($_SESSION['nombre'])){
+                                    echo '<a class="open-button" href="profile.php">'; 
+                                }
+                                else {
+                                    // Verificar y restaurar variable url
+                                    if (strstr($_SESSION['url'], '?')){
+                                        
+                                        $_SESSION['url'] = substr($_SESSION['url'], 0, strpos($_SESSION['url'], "?"));
+                                    }
+                                    echo '<a class="open-button" onclick="openForm()">';
+                                  }
+                            ?>
+                            <button class="btn_simple">Log in</button>
+                            </a>
+                        
+                    
+                
                 <form action="creating_account.php" method="post" class="form-container" onsubmit="return validar()">
 
                     <p>

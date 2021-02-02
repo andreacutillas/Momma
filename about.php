@@ -72,7 +72,7 @@
                         <button type="button" class="btn_cancel" onclick="closeForm()">x</button>
                     </div>
                     <h4>Sign in to your Account</h4>
-                    <h6>New to MoMA Design Store?</h6>
+                    <h5>New to MoMA Design Store?</h5>
                     <button  type="submit" class="btn_simple" onclick="window.location.href='create_account.php'">Create an account</button>
 
                     <div id="left_itm">
