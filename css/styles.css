@@ -376,7 +376,7 @@ section {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: top;
     justify-content: space-between;
 }
 
@@ -737,10 +737,6 @@ footer {
         width: 50%;
      }
 
-     .gallery figure img {
-        height: 400px;
-        padding: 20px;
-     }
 
     .gallery figcaption {
         padding: 0px 10px;
@@ -787,6 +783,10 @@ footer {
         padding-top: 0;
     }
 
+    .section_header #gallery_store figure {
+        width: 31%;
+    }
+
 
 @media (max-width: 760px) {
 
@@ -831,6 +831,11 @@ footer {
 
     #form_section .form-container {
         padding: 20px 20px;
+    .gallery img:hover {
+    width: 100%;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
     }
 
 
@@ -839,6 +844,29 @@ footer {
         h1 {
         font-size: 24px;
         line-height: 29px;
+    }
+
+    .gallery figure img:hover{  
+        transform: none;
+    }
+
+    #gallery_1 .gallery figure {
+    width: 46%;
+    padding-bottom: 20px;
+    }
+
+    #caja_about img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    }  
+}
+
+@media ( max-width: 500px ) {
+
+    h1 {
+    font-size: 24px;
+    line-height: 29px;
     }
 
     h2 {
@@ -976,7 +1004,12 @@ footer {
          padding: 10px;
     }
 
-     .section_header {
+    .gallery_btn .gallery figure {
+    width: 48%;
+    padding-bottom: 20px;
+}
+
+    .section_header {
         padding-top: 62px ;
     }
     
@@ -987,9 +1020,11 @@ footer {
     #footer_text {
         width: 200px;
     }
-    
-}
-    
-} 
 
+    .section_header #gallery_store figure {
+        width: 46%;
+    }
+    
+    
+    
 }

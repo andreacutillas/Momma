@@ -21,7 +21,7 @@ if(isset($_POST['signup_email']))
             $mysqli->query($peticionEscritura);
             
             session_start();
-            $_SESSION['nombre'] = $_POST['psw_email'];
+            $_SESSION['nombre'] = $_POST['signup_email'];
 
             header('Location: index.php');
 
