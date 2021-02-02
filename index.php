@@ -16,7 +16,7 @@
         <script type="text/javascript" src="js/menu.js"></script>
 
     </head>
-haoaohaoahoah
+
     <body>
         <header id="headerIndex">
             <!-- Menu -->
