@@ -6,6 +6,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>MoMA</title>
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
             <!--CSS-->
         <link rel="stylesheet" type="text/css" href="css/styles.css">
             <!--FONTS-->
@@ -19,7 +20,7 @@
     <body>
         <header id="headerIndex">
             <!-- Menu -->
-            <div class="menu_principal" id="menu">
+            <div id="menu">
                 <a class="logo" href="index.php"><img class="logo" src="img/Logo.svg" alt="logo"></a>
                 <nav class="list_menu">
                     <ul>
@@ -27,22 +28,29 @@
                         <li><a class="btn-about" href="about.php">ABOUT</a></li>
                         <li><a class="btn-cart" href="cart.php">CART</a></li>
                         <li>
-                            <?php
+                             <?php
                                 session_start();
+                                $_SESSION['url'] = $_SERVER['REQUEST_URI'];
+
                                 if(isset($_SESSION['nombre'])){
                                     echo '<a class="open-button" href="profile.php">'; 
                                 }
                                 else {
+                                    // Verificar y restaurar variable url
+                                    if (strstr($_SESSION['url'], '?')){
+                                        
+                                        $_SESSION['url'] = substr($_SESSION['url'], 0, strpos($_SESSION['url'], "?"));
+                                    }
                                     echo '<a class="open-button" onclick="openForm()">';
-                                }
+                                  }
                             ?>
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M8 0C9.06087 0 10.0783 0.421427 10.8284 1.17157C11.5786 1.92172 12 2.93913 12 4C12 5.06087 11.5786 6.07828 10.8284 6.82843C10.0783 7.57857 9.06087 8 8 8C6.93913 8 5.92172 7.57857 5.17157 6.82843C4.42143 6.07828 4 5.06087 4 4C4 2.93913 4.42143 1.92172 5.17157 1.17157C5.92172 0.421427 6.93913 0 8 0V0ZM8 10C12.42 10 16 11.79 16 14V16H0V14C0 11.79 3.58 10 8 10Z" fill="black"/>
                             </svg>
-                        </a></li>
+                            </a>
+                        </li>
                     </ul>
                 </nav>
-                <!-- <hr> -->
             </div>
 
             <button class="button_menu" onclick="abrirmenu()">
@@ -111,15 +119,8 @@
                         <p>Thanks to their faceted shapes, these mouth-blown Radiant Crystal Glasses can be placed down in a variety of ways, creating interesting reflections of light and liquid from different angles.</p>
                         <div class="btn-double">
                             <button class="btn_regular" onclick="window.location.href='article.php'">Shop Now</button>
-                            <!-- <button class="btn_heart">
-                                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12.3672 16.6469C12.6813 15.9195 13.1343 15.2603 13.7008 14.7063C14.2677 14.1506 14.936 13.709 15.6695 13.4055C16.4301 13.0895 17.2459 12.9278 18.0695 12.9297C19.225 12.9297 20.3523 13.2461 21.332 13.8438C21.5664 13.9867 21.7891 14.1438 22 14.3149C22.2109 14.1438 22.4336 13.9867 22.668 13.8438C23.6477 13.2461 24.775 12.9297 25.9305 12.9297C26.7625 12.9297 27.5688 13.0891 28.3305 13.4055C29.0664 13.7102 29.7297 14.1485 30.2992 14.7063C30.8664 15.2597 31.3195 15.919 31.6328 16.6469C31.9586 17.4039 32.125 18.2078 32.125 19.0352C32.125 19.8156 31.9656 20.6289 31.6492 21.4563C31.3844 22.1477 31.0047 22.8649 30.5195 23.5891C29.7508 24.7352 28.6938 25.9305 27.3813 27.1422C25.2063 29.1508 23.0523 30.5383 22.9609 30.5945L22.4055 30.9508C22.1594 31.1078 21.843 31.1078 21.5969 30.9508L21.0414 30.5945C20.95 30.536 18.7984 29.1508 16.6211 27.1422C15.3086 25.9305 14.2516 24.7352 13.4828 23.5891C12.9977 22.8649 12.6156 22.1477 12.3531 21.4563C12.0367 20.6289 11.8773 19.8156 11.8773 19.0352C11.875 18.2078 12.0414 17.4039 12.3672 16.6469ZM22 29.0969C22 29.0969 30.3438 23.7508 30.3438 19.0352C30.3438 16.6469 28.368 14.711 25.9305 14.711C24.2172 14.711 22.7312 15.6672 22 17.0641C21.2688 15.6672 19.7828 14.711 18.0695 14.711C15.632 14.711 13.6562 16.6469 13.6562 19.0352C13.6562 23.7508 22 29.0969 22 29.0969Z" fill="black"/>
-                                </svg>
-                            </button> -->
                         </div>
-        
                     </div>
-                
                 </div>
             </section>
             
@@ -127,7 +128,7 @@
             <section id="gallery_1">
                 <div class="gallery">
                     <figure>
-                        <a href="article.php"><img src="img/img2.jpg" alt="img2"></a>
+                        <a href="article.php"><img src="img/imge2.jpg" alt="img2"></a>
                         <figcaption>
                             <h5>Eames®</h5>
                             <p>Plywood Elephant</p>
@@ -135,7 +136,7 @@
                         </figcaption>
                     </figure>
                     <figure>
-                        <a href="article.php"><img src="img/img3.jpg" alt="img3"></a>
+                        <a href="article.php"><img src="img/imge3.jpg" alt="img3"></a>
                         <figcaption>
                             <h5>HAY Ellipse </h5>
                             <p>Trays</p>
@@ -143,7 +144,7 @@
                         </figcaption>
                     </figure>
                     <figure>
-                        <a href="article.php"><img src="img/img4.jpg" alt="img4"></a>
+                        <a href="article.php"><img src="img/imge4.jpg" alt="img4"></a>
                         <figcaption>
                             <h5>Sophie Monet</h5>
                             <p>Earrings</p>
@@ -155,18 +156,13 @@
             
             <!-- Sección 2 -->
             <section id="section_img_center">
-                <img src="img/img5.jpg" alt="img5">
+                <img src="img/imge5.jpg" alt="img5">
                 <div class="img_act">
                     <div class="blur">
                         <h1>Heng Balance Lamp</h1>
                         <p>Within the frame of the pleasingly minimalist Heng Lamp is a surprising way to illuminate it.</p>
                         <div class="btn-double">
                             <button class="btn_regular" onclick="window.location.href='article.php'">Shop Now</button>
-                            <!-- <button class="btn_heart">
-                                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12.3672 16.6469C12.6813 15.9195 13.1343 15.2603 13.7008 14.7063C14.2677 14.1506 14.936 13.709 15.6695 13.4055C16.4301 13.0895 17.2459 12.9278 18.0695 12.9297C19.225 12.9297 20.3523 13.2461 21.332 13.8438C21.5664 13.9867 21.7891 14.1438 22 14.3149C22.2109 14.1438 22.4336 13.9867 22.668 13.8438C23.6477 13.2461 24.775 12.9297 25.9305 12.9297C26.7625 12.9297 27.5688 13.0891 28.3305 13.4055C29.0664 13.7102 29.7297 14.1485 30.2992 14.7063C30.8664 15.2597 31.3195 15.919 31.6328 16.6469C31.9586 17.4039 32.125 18.2078 32.125 19.0352C32.125 19.8156 31.9656 20.6289 31.6492 21.4563C31.3844 22.1477 31.0047 22.8649 30.5195 23.5891C29.7508 24.7352 28.6938 25.9305 27.3813 27.1422C25.2063 29.1508 23.0523 30.5383 22.9609 30.5945L22.4055 30.9508C22.1594 31.1078 21.843 31.1078 21.5969 30.9508L21.0414 30.5945C20.95 30.536 18.7984 29.1508 16.6211 27.1422C15.3086 25.9305 14.2516 24.7352 13.4828 23.5891C12.9977 22.8649 12.6156 22.1477 12.3531 21.4563C12.0367 20.6289 11.8773 19.8156 11.8773 19.0352C11.875 18.2078 12.0414 17.4039 12.3672 16.6469ZM22 29.0969C22 29.0969 30.3438 23.7508 30.3438 19.0352C30.3438 16.6469 28.368 14.711 25.9305 14.711C24.2172 14.711 22.7312 15.6672 22 17.0641C21.2688 15.6672 19.7828 14.711 18.0695 14.711C15.632 14.711 13.6562 16.6469 13.6562 19.0352C13.6562 23.7508 22 29.0969 22 29.0969Z" fill="black"/>
-                                </svg>
-                            </button> -->
                         </div>
                     </div>
                 </div>
@@ -177,28 +173,28 @@
                 <div class="gallery_btn">
                     <div class="gallery">
                         <figure>
-                            <a href="article.php"><img src="img/img6.jpg" alt="img6"></a>
+                            <a href="article.php"><img src="img/imge6.jpg" alt="img6"></a>
                             <figcaption>
                                 <h5>Lexon Mino</h5>
                                 <p>L Pairable Speaker</p>
                             </figcaption>
                         </figure>
                         <figure>
-                            <a href="article.php"><img src="img/img7.jpg" alt="img7"></a>
+                            <a href="article.php"><img src="img/imge7.jpg" alt="img7"></a>
                             <figcaption>
                                 <h5>De Kooning </h5>
                                 <p>Framed Print</p>
                             </figcaption>
                         </figure>
                         <figure>
-                            <a href="article.php"><img src="img/img8.jpg" alt="img8"></a>
+                            <a href="article.php"><img src="img/imge8.jpg" alt="img8"></a>
                             <figcaption>
                                 <h5>Menorah</h5>
                                 <p>Candle Holder</p>
                             </figcaption>
                         </figure>
                         <figure>
-                            <a href="article.php"><img src="img/img9.jpg" alt="img9"></a>
+                            <a href="article.php"><img src="img/imge9.jpg" alt="img9"></a>
                             <figcaption>
                                 <h5>JWDA</h5>
                                 <p>Table Lamp</p>
@@ -210,7 +206,7 @@
             </section>
 
             <section>
-                <div id="caja_about">
+                <div id="caja_about" class="discover">
                     <div>
                         <div>
                             <h2>Discover what sets MoMA Design Store apart.</h2>
@@ -218,7 +214,7 @@
                         </div>
                         <button class="btn_regular" onclick="window.location.href='about.php'">Learn More About Us</button>
                     </div>
-                    <img src="img/img10.jpg" alt="img10">
+                    <img src="img/imge10.jpg" alt="img10">
                 </div>      
             </section>
         </main>

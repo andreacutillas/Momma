@@ -1,15 +1,3 @@
-<?php
-    session_start();
-    $url = $_SESSION['nombreurl'];
-    
-    echo $url;
-
-    $str = ucfirst(mb_substr($url, 7, null, 'UTF-8'));
-    echo $str;
-
-    $_SESSION['url'] = $str;
-?>
-
 <!DOCTYPE html>
 
 <html lang="en">
@@ -18,6 +6,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>MoMA</title>
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
             <!--CSS-->
         <link rel="stylesheet" type="text/css" href="css/styles.css">
             <!--FONTS-->
@@ -31,59 +20,45 @@
 
     <body>
         <header>
-
-        <!-- Dropdown -->
-
-        <div class="dropdown" style="float:left;">
-                <button class="dropbtn">
-                    <figure><img class="drop_logo" src="img/dropdown.svg" alt="dropdown"></img></figure>
-                </button>
-                <div class="dropdown-content" style="left:0;">
-                    <a href="index.php"><img src="img/logo.svg"></img></a>
-                    <a id="underline" href="store.php">STORE</a>
-                    <a href="about.php">ABOUT</a>
-                    <a href="cart.php">CART</a>
-                    <?php
-                                session_start();
-                                if(isset($_SESSION['nombre'])){
-                                    echo '<a class="open-button" href="profile.php">'; 
-                                }
-                                else {
-                                    echo '<a class="open-button" onclick="openForm()">';
-                                }
-                            ?>
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8 0C9.06087 0 10.0783 0.421427 10.8284 1.17157C11.5786 1.92172 12 2.93913 12 4C12 5.06087 11.5786 6.07828 10.8284 6.82843C10.0783 7.57857 9.06087 8 8 8C6.93913 8 5.92172 7.57857 5.17157 6.82843C4.42143 6.07828 4 5.06087 4 4C4 2.93913 4.42143 1.92172 5.17157 1.17157C5.92172 0.421427 6.93913 0 8 0V0ZM8 10C12.42 10 16 11.79 16 14V16H0V14C0 11.79 3.58 10 8 10Z" fill="black"/>
-                            </svg>
-                        </a>
-                </div>
-            </div>
-
             <!-- Menu -->
-            <div id="menu">
+            <div class="menu_principal" id="menu">
                 <a class="logo" href="index.php"><img class="logo" src="img/Logo.svg" alt="logo"></a>
                 <nav class="list_menu">
                     <ul>
-                        <li><a id="underline" class="btn-store" href="store.php">STORE</a></li>
+                        <li><a  id="underline" class="btn-store" href="store.php">STORE</a></li>
                         <li><a class="btn-about" href="about.php">ABOUT</a></li>
                         <li><a class="btn-cart" href="cart.php">CART</a></li>
                         <li>
-                            <?php
+                             <?php
                                 session_start();
+                                $_SESSION['url'] = $_SERVER['REQUEST_URI'];
+
                                 if(isset($_SESSION['nombre'])){
                                     echo '<a class="open-button" href="profile.php">'; 
                                 }
                                 else {
+                                    // Verificar y restaurar variable url
+                                    if (strstr($_SESSION['url'], '?')){
+                                        
+                                        $_SESSION['url'] = substr($_SESSION['url'], 0, strpos($_SESSION['url'], "?"));
+                                    }
                                     echo '<a class="open-button" onclick="openForm()">';
-                                }
+                                  }
                             ?>
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M8 0C9.06087 0 10.0783 0.421427 10.8284 1.17157C11.5786 1.92172 12 2.93913 12 4C12 5.06087 11.5786 6.07828 10.8284 6.82843C10.0783 7.57857 9.06087 8 8 8C6.93913 8 5.92172 7.57857 5.17157 6.82843C4.42143 6.07828 4 5.06087 4 4C4 2.93913 4.42143 1.92172 5.17157 1.17157C5.92172 0.421427 6.93913 0 8 0V0ZM8 10C12.42 10 16 11.79 16 14V16H0V14C0 11.79 3.58 10 8 10Z" fill="black"/>
                             </svg>
-                        </a></li>
+                            </a>
+                        </li>
                     </ul>
                 </nav>
+                <!-- <hr> -->
             </div>
+
+            <button class="button_menu" onclick="abrirmenu()">
+                <div class="linea" id="linea1"></div>
+                <div class="linea" id="linea2"></div>
+            </button>
 
             <!-- Login  -->
             <div class="form-popup" id="myForm"  
@@ -140,107 +115,107 @@
         <main>
             <section id="section_btn" class="section_header">
                 <h1>Store</h1>
-                <div class="gallery_btn">
-                    <div class="gallery">
-                    <figure>
-                        <a href="article.php"><img src="img/img21.jpg" alt="Eames® Plywood"></a>
-                        <figcaption>
-                            <h5>Eames®</h5>
-                            <p id="p4">Plywood Elephant</p>
-                            <p id="p3">€1,965 includes VAT</p>
-                        </figcaption>
-                    </figure>
-                    <figure>
-                        <a href="article.php"><img src="img/img20.jpg" alt="HAY Ellipse"></a>
-                        <figcaption>
-                            <h5>HAY Ellipse </h5>
-                            <p id="p4">Trays</p>
-                            <p id="p3">€20.95 includes VAT</p>
-                        </figcaption>
-                    </figure>
-                    <figure>
-                        <a href="article.php"><img src="img/img19.jpg" alt="Sophie Monet"></a>
-                        <figcaption>
-                            <h5>Sophie Monet</h5>
-                            <p id="p4">Earrings</p>
-                            <p id="p3">€76.95 includes VAT</p>
-                        </figcaption>
-                    </figure>
-                    <figure>
-                        <a href="article.php"><img src="img/img18.jpg" alt="Caracas"></a>
-                        <figcaption>
-                            <h5>Caracas</h5>
-                            <p id="p4">Desktop Mobile</p>
-                            <p id="p3">€172.95 includes VAT</p>
-                        </figcaption>
-                    </figure>
-                    
-                    <figure>
-                        <a href="article.php"><img src="img/img6.jpg" alt="Lexon Mino L"></a>
-                        <figcaption>
-                            <h5>Lexon Mino L</h5>
-                            <p id="p4">Pairable Speaker</p>
-                            <p id="p3">€37.95 includes VAT</p>
-                        </figcaption>
-                    </figure>
-                    <figure>
-                        <a href="article.php"><img src="img/img7.jpg" alt="De Kooning"></a>
-                        <figcaption>
-                            <h5>De Kooning</h5>
-                            <p id="p4">Framed Print</p>
-                            <p id="p3">€308.95 includes VAT</p>
-                        </figcaption>
-                    </figure>
-                    <figure>
-                        <a href="article.php"><img src="img/img8.jpg" alt="Menorah"></a>
-                        <figcaption>
-                            <h5>Menorah</h5>
-                            <p id="p4">Candle Holder</p>
-                            <p id="p3">€82.95 includes VAT</p>
-                        </figcaption>
-                    </figure>
-                    <figure>
-                        <a href="article.php"><img src="img/img9.jpg" alt="JWDA"></a>
-                        <figcaption>
-                            <h5>JWDA</h5>
-                            <p id="p4">Table Lamp</p>
-                            <p id="p3">€259.95 includes VAT</p>
-                        </figcaption>
-                    </figure>
-                    
-                    <figure>
-                        <a href="article.php"><img src="img/img11.jpg" alt="Three Seasons"></a>
-                        <figcaption>
-                            <h5>Three Seasons</h5>
-                            <p id="p4">Matryoshka</p>
-                            <p id="p3">€207.95 includes VAT</p>
-                        </figcaption>
-                    </figure>
-                    <figure>
-                        <a href="article.php"><img src="img/img12.jpg" alt="Pond"></a>
-                        <figcaption>
-                            <h5>Pond</h5>
-                            <p id="p4">Mirror</p>
-                            <p id="p3">€383.95 includes VAT</p>
-                        </figcaption>
-                    </figure>
-                    <figure>
-                        <a href="article.php"><img src="img/img13.jpg" alt="Plates"></a>
-                        <figcaption>
-                            <h5>Plates</h5>
-                            <p id="p4">Set of 4</p>
-                            <p id="p3">€49.95 includes VAT</p>
-                        </figcaption>
-                    </figure>
-                    <figure>
-                        <a href="article.php"><img src="img/img15.jpg" alt="anOrdain"></a>
-                        <figcaption>
-                            <h5>anOrdain</h5>
-                            <p id="p4">Model 1 Watch</p>
-                            <p id="p3">€1,657.95 includes VAT</p>
-                        </figcaption>
-                    </figure>
-                </div>
+                <!-- <div class="gallery_1"> -->
+                    <div class="gallery" id="gallery_store">
+                        <figure>
+                            <a href="article.php"><img src="img/img21.jpg" alt="Eames® Plywood"></a>
+                            <figcaption>
+                                <h5>Eames®</h5>
+                                <p id="p4">Plywood Elephant</p>
+                                <p id="p3">€1,965 includes VAT</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <a href="article.php"><img src="img/img20.jpg" alt="HAY Ellipse"></a>
+                            <figcaption>
+                                <h5>HAY Ellipse </h5>
+                                <p id="p4">Trays</p>
+                                <p id="p3">€20.95 includes VAT</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <a href="article.php"><img src="img/img19.jpg" alt="Sophie"></a>
+                            <figcaption>
+                                <h5>Sophie</h5>
+                                <p id="p4">Earrings</p>
+                                <p id="p3">€76.95 includes VAT</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <a href="article.php"><img src="img/img18.jpg" alt="Caracas"></a>
+                            <figcaption>
+                                <h5>Caracas</h5>
+                                <p id="p4">Desktop Mobile</p>
+                                <p id="p3">€172.95 includes VAT</p>
+                            </figcaption>
+                        </figure>
+                        
+                        <figure>
+                            <a href="article.php"><img src="img/img6.jpg" alt="Lexon Mino L"></a>
+                            <figcaption>
+                                <h5>Lexon Mino L</h5>
+                                <p id="p4">Pairable Speaker</p>
+                                <p id="p3">€37.95 includes VAT</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <a href="article.php"><img src="img/img7.jpg" alt="De Kooning"></a>
+                            <figcaption>
+                                <h5>De Kooning</h5>
+                                <p id="p4">Framed Print</p>
+                                <p id="p3">€308.95 includes VAT</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <a href="article.php"><img src="img/img8.jpg" alt="Menorah"></a>
+                            <figcaption>
+                                <h5>Menorah</h5>
+                                <p id="p4">Candle Holder</p>
+                                <p id="p3">€82.95 includes VAT</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <a href="article.php"><img src="img/img9.jpg" alt="JWDA"></a>
+                            <figcaption>
+                                <h5>JWDA</h5>
+                                <p id="p4">Table Lamp</p>
+                                <p id="p3">€259.95 includes VAT</p>
+                            </figcaption>
+                        </figure>
+                        
+                        <figure>
+                            <a href="article.php"><img src="img/img11.png" alt="Seasons"></a>
+                            <figcaption>
+                                <h5>Seasons</h5>
+                                <p id="p4">Matryoshka</p>
+                                <p id="p3">€207.95 includes VAT</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <a href="article.php"><img src="img/img12.png" alt="Pond"></a>
+                            <figcaption>
+                                <h5>Pond</h5>
+                                <p id="p4">Mirror</p>
+                                <p id="p3">€383.95 includes VAT</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <a href="article.php"><img src="img/img13.png" alt="Plates"></a>
+                            <figcaption>
+                                <h5>Plates</h5>
+                                <p id="p4">Set of 4</p>
+                                <p id="p3">€49.95 includes VAT</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <a href="article.php"><img src="img/img15.jpg" alt="anOrdain"></a>
+                            <figcaption>
+                                <h5>anOrdain</h5>
+                                <p id="p4">Model 1 Watch</p>
+                                <p id="p3">€1,657.95 includes VAT</p>
+                            </figcaption>
+                        </figure>
+                    </div>
                 </div>
             </section>
         

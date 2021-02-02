@@ -6,6 +6,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>MoMA</title>
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
             <!--CSS-->
         <link rel="stylesheet" type="text/css" href="css/styles.css">
             <!--FONTS-->
@@ -13,41 +14,14 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,900;1,400;1,700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
             <!--JS-->
         <script type="text/javascript" src="js/menu.js"></script>
+        <script type="text/javascript" src="js/sign_up.js"></script>
     
     </head>
 
     <body>
         <header>
-
-        <!-- Dropdown -->
-
-        <div class="dropdown" style="float:left;">
-                <button class="dropbtn">
-                    <figure><img class="drop_logo" src="img/dropdown.svg" alt="dropdown"></img></figure>
-                </button>
-                <div class="dropdown-content" style="left:0;">
-                    <a href="index.php"><img src="img/logo.svg"></img></a>
-                    <a href="store.php">STORE</a>
-                    <a href="about.php">ABOUT</a>
-                    <a href="cart.php">CART</a>
-                    <?php
-                                session_start();
-                                if(isset($_SESSION['nombre'])){
-                                    echo '<a class="open-button" href="profile.php">'; 
-                                }
-                                else {
-                                    echo '<a class="open-button" onclick="openForm()">';
-                                }
-                            ?>
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8 0C9.06087 0 10.0783 0.421427 10.8284 1.17157C11.5786 1.92172 12 2.93913 12 4C12 5.06087 11.5786 6.07828 10.8284 6.82843C10.0783 7.57857 9.06087 8 8 8C6.93913 8 5.92172 7.57857 5.17157 6.82843C4.42143 6.07828 4 5.06087 4 4C4 2.93913 4.42143 1.92172 5.17157 1.17157C5.92172 0.421427 6.93913 0 8 0V0ZM8 10C12.42 10 16 11.79 16 14V16H0V14C0 11.79 3.58 10 8 10Z" fill="black"/>
-                            </svg>
-                        </a>
-                </div>
-            </div>
-            
             <!-- Menu -->
-            <div id="menu">
+            <div class="menu_principal" id="menu">
                 <a class="logo" href="index.php"><img class="logo" src="img/Logo.svg" alt="logo"></a>
                 <nav class="list_menu">
                     <ul>
@@ -55,22 +29,36 @@
                         <li><a class="btn-about" href="about.php">ABOUT</a></li>
                         <li><a class="btn-cart" href="cart.php">CART</a></li>
                         <li>
-                            <?php
+                             <?php
                                 session_start();
+                                $_SESSION['url'] = $_SERVER['REQUEST_URI'];
+
                                 if(isset($_SESSION['nombre'])){
                                     echo '<a class="open-button" href="profile.php">'; 
                                 }
                                 else {
+                                    // Verificar y restaurar variable url
+                                    if (strstr($_SESSION['url'], '?')){
+                                        
+                                        $_SESSION['url'] = substr($_SESSION['url'], 0, strpos($_SESSION['url'], "?"));
+                                    }
                                     echo '<a class="open-button" onclick="openForm()">';
-                                }
+                                  }
                             ?>
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M8 0C9.06087 0 10.0783 0.421427 10.8284 1.17157C11.5786 1.92172 12 2.93913 12 4C12 5.06087 11.5786 6.07828 10.8284 6.82843C10.0783 7.57857 9.06087 8 8 8C6.93913 8 5.92172 7.57857 5.17157 6.82843C4.42143 6.07828 4 5.06087 4 4C4 2.93913 4.42143 1.92172 5.17157 1.17157C5.92172 0.421427 6.93913 0 8 0V0ZM8 10C12.42 10 16 11.79 16 14V16H0V14C0 11.79 3.58 10 8 10Z" fill="black"/>
                             </svg>
-                        </a></li>
+                            </a>
+                        </li>
                     </ul>
                 </nav>
+                <!-- <hr> -->
             </div>
+
+            <button class="button_menu" onclick="abrirmenu()">
+                <div class="linea" id="linea1"></div>
+                <div class="linea" id="linea2"></div>
+            </button>
 
             <!-- Login  -->
             <div class="form-popup" id="myForm"  
@@ -136,20 +124,25 @@
 
                     <p>
                         <label for="first_name">First Name</label>
-                        <input type="text" id="first_name" placeholder="First Name" name="first_name" required>
+                        <input class="input_text" type="text" id="first_name" placeholder="First Name" name="first_name" required>
                 
                         <label for="last_name">Last Name</label>
-                        <input type="text" id="last_name" placeholder="Last Name" name="last_name" required>
+                        <input class="input_text" type="text" id="last_name" placeholder="Last Name" name="last_name" required>
                 
-                        <label for="email2">Email</label>
-                        <input type="text" id="signup_email" placeholder="Enter Email" name="signup_email" required>
+                        <label for="signup_email">Email</label>
+                        <input onclick="Trash_Error()" onkeyup="ValidateEmail()" class="input_text" type="text" id="signup_email" placeholder="Enter Email" name="signup_email" required>
+                        <span id="emailOK"></span>
                 
                         <label for="psw">Password</label>
-                        <input type="password" id="signup_psw" placeholder="Enter Password" name="signup_psw" required>
+                        <input onclick="Trash_Error()" onkeyup="check()" class="input_text" type="password" id="signup_psw" placeholder="Enter Password" name="signup_psw" required>
 
                         <label for="psw2">Confirm Password</label>
-                        <input type="password" id="signup_pswconfirm" placeholder="Confirm Password" name="signup_pswconfirm" required>  
-                        
+                        <input onclick="Trash_Error()" onkeyup="check()" class="input_text" type="password" id="signup_pswconfirm" placeholder="Confirm Password" name="signup_pswconfirm" required> 
+                        <span id='message'></span>
+
+                        <p id="validaciones" style="display:none">Las contraseñas no coinciden. Por favor, revísalas e intenta enviar de nuevo.</p>
+                        <p id="validaciones2" style="display:none">Email incorrecto. Por favor, revísalas e intenta enviar de nuevo.</p>
+
                         <div id="center_itm">
                             <button type="submit" class="btn_regular">Register</button>
                         </div>
@@ -157,7 +150,7 @@
                     </p>
 
                 </form>
-                <p id="validaciones" style="display:none">Las contraseñas no coinciden. Por favor, revísalas e intenta enviar de nuevo.</p>
+               
 
                 <?php
                         if(isset($_GET['error2'])){
