@@ -863,6 +863,24 @@ footer {
         width: 46%;
         padding-bottom: 20px;
     }
+
+    #caja_article {
+        flex-direction: column;
+    }
+
+    #carousel_text {
+       width: 100%;
+       padding-top: 40px;
+       padding-left: 0;
+    }
+
+    #carousel_text button {
+        margin-top: 40px;
+    }
+
+    #carousel {
+        width: 100%;
+    }
 }
 
 @media ( max-width: 500px ) {
@@ -1044,6 +1062,10 @@ footer {
         border-radius: 0px;
         height: 100vh;
         z-index: 140;
+    }
+
+    .contenido {
+        flex-direction: column;
     }
     
 }
