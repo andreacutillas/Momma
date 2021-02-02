@@ -645,6 +645,36 @@ footer {
     padding-bottom: 65px;
 }
 
+
+.section_header #nombre_profile{
+    display: flex;
+    align-items: center;
+ 
+}
+
+.section_header #nombre_profile h3 {
+    padding-right: 10px;
+    font-size: 36px;
+ 
+}
+
+.section_header #nombre_profile #p2 {
+    text-decoration: none;
+    padding: 0; 
+    font-size: 36px;
+}
+
+#section_profile {
+    padding-bottom: 40px;
+}
+
+#section_profile h1{
+    padding-bottom: 12px;
+}
+
+
+
+
 /* Maquetación CREATE_ACCOUNT.HTML */
 
 #form_section .form-container {
@@ -728,17 +758,13 @@ footer {
         flex-wrap: wrap;
     }
 
-    .gallery_btn .gallery figure {
-        width: 25%;
-    }
-
      .gallery figure {
         width: 50%;
      }
 
      .gallery figure img {
-        width: 80%;
-        margin: 10px;
+        height: 400px;
+        padding: 20px;
      }
 
 
@@ -773,10 +799,6 @@ footer {
         margin-right: auto;
     }
 
-    .total {
-        padding-top: 40px;
-    }
-
     /*Form*/
 
     #form_section .form-container {
@@ -786,13 +808,14 @@ footer {
     .caja_blur {
         width: 90vw;
     }  
-
-    .gallery h5 {
-        padding-top: 0;
-    }
+        
 
      .gallery figure img:hover{
         transform: none;
+    }
+
+    .gallery h5 {
+        padding-top: 0;
     }
 
 
@@ -807,44 +830,17 @@ footer {
         font-size: 16px;
     }
 
-    
-
     .blur h1 {
         font-size: 40px;
         line-height: 40px;
     }
 
     .gallery figure img {
-        /*height: 300px;*/
-     }
-
-
-     .gallery_btn .gallery figure {
-         width: 50%;
+        height: 300px;
      }
 
      #gallery_1 .gallery {
         flex-wrap: wrap;
-    }
-
-    /*Carousel*/
-
-    #caja_article {
-        flex-direction: column;
-    }
-    
-    #carousel_text {
-       width: 100%;
-       padding-top: 40px;
-       padding-left: 0;
-    }
-
-    #carousel_text button {
-        margin-top: 40px;
-    }
-
-    #carousel {
-        width: 100%;
     }
 
      #caja_about {
@@ -858,10 +854,6 @@ footer {
     #discover button, #discover img {
         margin-left: auto;
         margin-right: auto;
-    }
-
-    #gallery_1 .gallery figure {
-        width: 50%;
     }
 
     #gallery_1 .gallery figure:last-child {
@@ -969,7 +961,7 @@ footer {
     }
 
     #underline {
-        text-decoration: underline black;
+        text-decoration: underline white;
     }
 
     #caja_about img{
@@ -980,10 +972,6 @@ footer {
         object-fit: cover;
         height: 400px;
         border-radius: 40px;
-    }
-
-    .section_header {
-        padding-top: 30px;
     }
 
     .list_menu {
@@ -1060,7 +1048,6 @@ footer {
 
     .gallery figure {
         width: 50%;
-        padding-bottom: 20px;
     }
 
     .gallery figcaption p {
@@ -1085,18 +1072,6 @@ footer {
 
     #footer_text {
         width: 200px;
-    }
-
-    .form-popup {
-        top: 0px;
-        width: 100%;
-        border-radius: 0px;    
-    
-        z-index: 140;
-    }
-
-    .contenido {
-        flex-direction: column;        
     }
     
     }

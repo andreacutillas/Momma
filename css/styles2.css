@@ -605,6 +605,11 @@ footer {
     padding-bottom: 65px;
 }
 
+.section_header #nombre_profile{
+    display: flex;
+ 
+}
+
 /* Maquetación CREATE_ACCOUNT.HTML */
 
 #form_section .form-container {
@@ -646,6 +651,7 @@ label {
    flex-wrap: wrap;
    flex-direction: column;
 }
+
 
 
 /* Maquetación de la MEDIA QUERY */

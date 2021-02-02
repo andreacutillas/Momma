@@ -119,21 +119,27 @@
         </header>
 
         <main>
-            <section class="section_header">
+            <section class="section_header" id="section_profile">
                 <h1>My Profile</h1>
             
-                <div>
+                <div id="nombre_profile">
                     <h3>Hello!</h3>
-                    <p id="p2">(Name)</p>
 
                     <?php
-                    session_start();
+                        session_start();
 
-                    foreach ($_SESSION as $key=>$val)
-                    echo $key." ".$val."<br/>";
-                    
-                    echo $pass." ".' es muy';
-                ?>
+                        $mysqli = new mysqli('localhost', 'root', '', 'moma');
+                        $mysqli->set_charset('utf8');
+
+                        $peticion = 'SELECT * FROM usuario WHERE mail="'.$_POST['email'].'"';
+
+                        $resultados = $mysqli->query($peticion);
+
+                        $idName = $resultados->fetch_object()->idName;
+
+                        echo '<p id="p2">'.$idName.'</p>';
+                        
+                     ?>
 
                 </div>
 
