@@ -692,10 +692,6 @@ footer {
     margin-right: 40px;
 }
 
-.carousel-cell img { 
-    height: 52vw; 
-}
-
 #caja_article {
     display: flex; 
     flex-wrap: wrap;
