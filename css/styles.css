@@ -1058,6 +1058,24 @@ footer {
         width: 200px;
     }
 
+    footer {
+        padding-top: 40px;
+    }
+
+    #menu_footer .list_menu ul {
+        padding: 15px;
+
+    }
+
+    #menu_footer .list_menu li {
+        padding: 10px 0;
+    }
+
+    #menu_footer .list_menu {
+
+        padding: 0;
+    }
+
     .section_header #gallery_store figure {
         width: 46%;
     }
@@ -1072,6 +1090,10 @@ footer {
 
     .contenido {
         flex-direction: column;
+    }
+
+    #center_itm img {
+        width: 100%;
     }
     
 }

@@ -6,7 +6,7 @@ if(isset($_POST['signup_email']))
 
     if($mysqli->connect_errno){
         //echo "Conexión fallida";
-        header('Location: create_account.php?error=3');
+        header('Location: create_account.php?error2=8');
     }
     else{
         //echo "Conexión exitosa";

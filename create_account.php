@@ -118,8 +118,25 @@
             <section id="form_section" class="section_header">
                 <h1>Create an Account</h1>
                 <h5>Already have an account?</h5>
-                <button class="btn_simple">Log In</button>
-                
+                <?php
+                    session_start();
+                    $_SESSION['url'] = $_SERVER['REQUEST_URI'];
+
+                    if(isset($_SESSION['nombre'])){
+                        echo '<a class="open-button" href="profile.php">'; 
+                    }
+                    else {
+                        // Verificar y restaurar variable url
+                        if (strstr($_SESSION['url'], '?')){
+
+                            $_SESSION['url'] = substr($_SESSION['url'], 0, strpos($_SESSION['url'], "?"));
+                        }
+                        echo '<a class="open-button" onclick="openForm()">';
+                        }
+                ?>
+                <button class="btn_simple">Log in</button>
+                </a>
+            
                 <form action="creating_account.php" method="post" class="form-container" onsubmit="return validar()">
 
                     <p>
@@ -140,8 +157,8 @@
                         <input onclick="Trash_Error()" onkeyup="check()" class="input_text" type="password" id="signup_pswconfirm" placeholder="Confirm Password" name="signup_pswconfirm" required> 
                         <span id='message'></span>
 
-                        <p id="validaciones" style="display:none">Las contraseñas no coinciden. Por favor, revísalas e intenta enviar de nuevo.</p>
-                        <p id="validaciones2" style="display:none">Email incorrecto. Por favor, revísalas e intenta enviar de nuevo.</p>
+                        <p id="validaciones" style="display:none">Passwords don't match. Try writing something diferent!</p>
+                        <p id="validaciones2" style="display:none">This email is incorrect. Try writing something diferent!</p>
 
                         <div id="center_itm">
                             <button type="submit" class="btn_regular">Register</button>
@@ -152,29 +169,23 @@
                 </form>
                
 
-                <?php
+                      <?php
                         if(isset($_GET['error2'])){
                             if($_GET['error2'] == 6){
-                                echo "<p>Passwords no coinciden</p>";
+                                echo "<p>Passwords don't match.</p>";
                             }
                             else if($_GET['error2'] == 7){
-                                echo "<p>El usuario no está definido, regístrate en este formulario.</p>";
+                                echo "<p>User not defined, plase register.</p>";
                             }
                             else if($_GET['error2'] == 8){
-                                echo "<p>Hay problemas de conexión con base de datos. Inténtalo de nuevo más tarde.</p>";
+                                echo "<p>It looks like you are having trouble with your connection. Please try again later</p>";
                             }
                             else if($_GET['error2'] == 9){
-                                echo "<p>The email address is already registered.</p>";
-                            }
-                            else if($_GET['error2'] == 10){
-                                echo "<p>Contraseña incorrecta. Por favor, inténtalo de nuevo.</p>";
+                                echo "<p>This email address is already registered.</p>";
                             }
                         }
                     ?> 
               
-                
-
-                
                 <div>
                     <figure id="center_itm">
                         <img class="shipping" src="img/img14.jpg" alt="img14">
