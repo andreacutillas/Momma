@@ -25,7 +25,7 @@
                     <ul>
                         <li><a class="btn-store" href="store.php">STORE</a></li>
                         <li><a class="btn-about" href="about.php">ABOUT</a></li>
-                        <li><a class="btn-cart" href="cart.php">CART</a></li>
+                        <li><a id="underline" class="btn-cart" href="cart.php">CART</a></li>
                         <li>
                              <?php
                                 session_start();
