@@ -831,6 +831,8 @@ footer {
 
     #form_section .form-container {
         padding: 20px 20px;
+    }
+
     .gallery img:hover {
     width: 100%;
     -moz-box-shadow: none;
@@ -1025,6 +1027,8 @@ footer {
         width: 46%;
     }
     
-    
+}
+
+}
     
 }
