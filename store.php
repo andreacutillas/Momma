@@ -121,7 +121,7 @@
                             <a href="article.php"><img src="img/img21.jpg" alt="Eames® Plywood"></a>
                             <figcaption>
                                 <h5>Eames®</h5>
-                                <p id="p4">Plywood Elephant</p>
+                                <p id="p4">Plywood Elephant</p><br>
                                 <p id="p3">€1,965 includes VAT</p>
                             </figcaption>
                         </figure>
@@ -129,7 +129,7 @@
                             <a href="article.php"><img src="img/img20.jpg" alt="HAY Ellipse"></a>
                             <figcaption>
                                 <h5>HAY Ellipse </h5>
-                                <p id="p4">Trays</p>
+                                <p id="p4">Trays</p><br>
                                 <p id="p3">€20.95 includes VAT</p>
                             </figcaption>
                         </figure>
@@ -137,7 +137,7 @@
                             <a href="article.php"><img src="img/img19.jpg" alt="Sophie"></a>
                             <figcaption>
                                 <h5>Sophie</h5>
-                                <p id="p4">Earrings</p>
+                                <p id="p4">Earrings</p><br>
                                 <p id="p3">€76.95 includes VAT</p>
                             </figcaption>
                         </figure>
@@ -145,7 +145,7 @@
                             <a href="article.php"><img src="img/img18.jpg" alt="Caracas"></a>
                             <figcaption>
                                 <h5>Caracas</h5>
-                                <p id="p4">Desktop Mobile</p>
+                                <p id="p4">Desktop Mobile</p><br>
                                 <p id="p3">€172.95 includes VAT</p>
                             </figcaption>
                         </figure>
@@ -154,7 +154,7 @@
                             <a href="article.php"><img src="img/img6.jpg" alt="Lexon Mino L"></a>
                             <figcaption>
                                 <h5>Lexon Mino L</h5>
-                                <p id="p4">Pairable Speaker</p>
+                                <p id="p4">Pairable Speaker</p><br>
                                 <p id="p3">€37.95 includes VAT</p>
                             </figcaption>
                         </figure>
@@ -162,7 +162,7 @@
                             <a href="article.php"><img src="img/img7.jpg" alt="De Kooning"></a>
                             <figcaption>
                                 <h5>De Kooning</h5>
-                                <p id="p4">Framed Print</p>
+                                <p id="p4">Framed Print</p><br>
                                 <p id="p3">€308.95 includes VAT</p>
                             </figcaption>
                         </figure>
@@ -170,7 +170,7 @@
                             <a href="article.php"><img src="img/img8.jpg" alt="Menorah"></a>
                             <figcaption>
                                 <h5>Menorah</h5>
-                                <p id="p4">Candle Holder</p>
+                                <p id="p4">Candle Holder</p><br>
                                 <p id="p3">€82.95 includes VAT</p>
                             </figcaption>
                         </figure>
@@ -178,7 +178,7 @@
                             <a href="article.php"><img src="img/img9.jpg" alt="JWDA"></a>
                             <figcaption>
                                 <h5>JWDA</h5>
-                                <p id="p4">Table Lamp</p>
+                                <p id="p4">Table Lamp</p><br>
                                 <p id="p3">€259.95 includes VAT</p>
                             </figcaption>
                         </figure>
@@ -187,7 +187,7 @@
                             <a href="article.php"><img src="img/img11.png" alt="Seasons"></a>
                             <figcaption>
                                 <h5>Seasons</h5>
-                                <p id="p4">Matryoshka</p>
+                                <p id="p4">Matryoshka</p><br>
                                 <p id="p3">€207.95 includes VAT</p>
                             </figcaption>
                         </figure>
@@ -195,7 +195,7 @@
                             <a href="article.php"><img src="img/img12.png" alt="Pond"></a>
                             <figcaption>
                                 <h5>Pond</h5>
-                                <p id="p4">Mirror</p>
+                                <p id="p4">Mirror</p><br>
                                 <p id="p3">€383.95 includes VAT</p>
                             </figcaption>
                         </figure>
@@ -203,7 +203,7 @@
                             <a href="article.php"><img src="img/img13.png" alt="Plates"></a>
                             <figcaption>
                                 <h5>Plates</h5>
-                                <p id="p4">Set of 4</p>
+                                <p id="p4">Set of 4</p><br>
                                 <p id="p3">€49.95 includes VAT</p>
                             </figcaption>
                         </figure>
@@ -211,7 +211,7 @@
                             <a href="article.php"><img src="img/img15.jpg" alt="anOrdain"></a>
                             <figcaption>
                                 <h5>anOrdain</h5>
-                                <p id="p4">Model 1 Watch</p>
+                                <p id="p4">Model 1 Watch</p><br>
                                 <p id="p3">€1,657.95 includes VAT</p>
                             </figcaption>
                         </figure>

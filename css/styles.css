@@ -347,12 +347,14 @@ h6 {
     font-weight: normal;
     font-size: 16px;
     line-height: 24px;
+    transition: 1s;
 }
 
 .btn_regular:hover,
 .btn_heart:hover {
     background-color: #DA605A;
     border: #DA605A;
+    color: white;
 }
 
 .btn_heart {
@@ -405,6 +407,7 @@ section {
     border-radius: 40px;
     width: 100%;
     object-fit: cover;
+    transition: 1s;
     
 }
 
@@ -417,6 +420,7 @@ section {
 
 .gallery figure img:hover{
     transform: scale(1.3);
+    
 }
 
 figcaption {
@@ -453,6 +457,11 @@ h5 {
 .section_subtitle {
     padding-bottom: 100px;
 }
+
+#gallery_shop figure img {
+    height: 70%;
+}
+
 
 .section_subtitle #caja_about p {
     padding-bottom: 0;
@@ -901,6 +910,11 @@ footer {
         line-height: 29px;
     }
 
+    h5 {
+        font-size: 15px;
+        
+    }
+
     header {
         width: 100vw;
     }
@@ -910,19 +924,22 @@ footer {
         justify-content: initial;
         position: absolute;
         z-index: 20;
-        padding-top: 54px;
+        padding-top: 84px;
         align-items: center;
         left: -100%;
 
-        background-color: #DA605A;
+        background-color: #da605a;
         width: 100%;
         height: 100vh;
 
-        transition: 1s;    
+        transition: 1s;  
+        
     }
 
+
     #menu a {
-        font-size: 20px;     
+        font-size: 20px; 
+        color: white;    
     }
 
     #menu .logo {
@@ -1094,6 +1111,82 @@ footer {
 
     #center_itm img {
         width: 100%;
+    }
+
+    .section_header #nombre_profile {
+        flex-wrap: wrap;
+        align-items: initial;
+        flex-direction: column;  
+        padding-bottom: 0; 
+    }
+
+    .section_header #nombre_profile #p2,
+    .section_header #nombre_profile h3 {
+        font-size: 15px;
+    }
+
+    .section_subtitle h4 {
+        font-size: 25px;
+        padding-bottom: 10px;
+    }
+
+    #section_profile {
+        padding-bottom: 10px;
+    }
+
+    .gallery figure img,
+    .gallery_btn .gallery figure {
+        height: 100%;
+        
+    }
+
+    #gallery_store img {
+        height: 150px;
+    }
+
+    #gallery_store figcaption p {
+        display: contents;
+        font-size: 10px;
+        padding-bottom: 0;
+        line-height: 0px;
+    }
+
+    #gallery_store figure {
+        padding-bottom: 20px;
+    }
+
+    #section_about {
+        padding-bottom: 10px;
+    }
+
+    .gallery_btn figure img {
+       padding: 0;
+    }
+
+    section {
+        padding-bottom: 30px;
+    }
+
+    #caja_about p {
+        padding-bottom: 30px;
+    }
+    #caja_about img {
+        padding-top: 20px;
+    }
+
+    #gallery_shop figure img{
+        height: 200px;
+        padding-bottom: 0;
+    }
+
+    .total {
+        padding-top: 0px;
+        padding-bottom: 10px;
+        
+    }
+    
+    #menu svg path {
+        fill: white;
     }
     
 }

@@ -27,6 +27,10 @@ function abrirmenu() {
       
       btnmenuuno.style.transform = "translateY(-7px)";
       btnmenudos.style.transform = "translateY(7px)";
+      btnmenudos.style.background = 'black';
+      btnmenuuno.style.background = 'black'; 
+      btnmenuuno.style.transition = '0.5s'; 
+      btnmenudos.style.transition = '0.5s'; 
 
   }
       
@@ -37,8 +41,9 @@ function abrirmenu() {
       mimenu.style.left= "0%";
 
       btnmenuuno.style.transform = " rotate(-45deg)";
-      btnmenudos.style.transform = " rotate(45deg)";
-      
+      btnmenuuno.style.background = 'white';
+      btnmenudos.style.transform = " rotate(45deg)";   
+      btnmenudos.style.background = 'white';   
   }
 } 
 

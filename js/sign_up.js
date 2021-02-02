@@ -13,7 +13,7 @@ function check(){
 
 function ValidateEmail() {
   var email_valor = document.getElementById('signup_email').value;
-  valido = document.getElementById('emailOK');
+  var valido = document.getElementById('emailOK');
 
   var mailformat = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
