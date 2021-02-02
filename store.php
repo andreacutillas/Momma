@@ -116,7 +116,7 @@
             <section id="section_btn" class="section_header">
                 <h1>Store</h1>
                 <!-- <div class="gallery_1"> -->
-                    <div class="gallery">
+                    <div class="gallery" id="gallery_store">
                         <figure>
                             <a href="article.php"><img src="img/img21.jpg" alt="Eames® Plywood"></a>
                             <figcaption>
