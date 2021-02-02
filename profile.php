@@ -6,6 +6,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>MoMA</title>
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
             <!--CSS-->
         <link rel="stylesheet" type="text/css" href="css/styles.css">
             <!--FONTS-->
